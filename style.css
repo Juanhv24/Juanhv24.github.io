@@ -1,90 +1,132 @@
+/* Variables for easy branding */
 :root {
-    --primary-color: #2d3436; /* Dark professional gray */
-    --accent-color: #0984e3;  /* Professional blue */
-    --bg-color: #f9f9f9;
-    --text-color: #2d3436;
+    --primary-bg: #ffffff;
+    --secondary-bg: #f8f9fa;
+    --text-main: #212529;
+    --text-muted: #6c757d;
+    --accent-blue: #0056b3; /* Professional Banking Blue */
+    --border-color: #dee2e6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    margin: 0;
-    color: var(--text-color);
-    background-color: var(--bg-color);
+    color: var(--text-main);
+    background-color: var(--primary-bg);
     line-height: 1.6;
 }
 
-header {
-    background: #ffffff;
-    padding: 2rem 10%;
-    border-bottom: 1px solid #eee;
-}
-
+/* Navigation */
 nav {
+    padding: 1.5rem 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1000;
 }
 
 .logo {
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--accent-blue);
 }
 
 nav ul {
-    list-style: none;
     display: flex;
     gap: 2rem;
+    list-style: none;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--text-color);
-    font-weight: 400;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s;
 }
 
+nav a:hover {
+    color: var(--accent-blue);
+}
+
+/* Hero Section */
 .hero {
-    padding: 4rem 0;
-    text-align: center;
+    padding: 6rem 10%;
+    text-align: left; /* Aligning left looks more modern/developer-style */
+    max-width: 900px;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.1;
 }
 
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem 10%;
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
 }
 
-.project-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.tech-tag {
-    font-size: 0.8rem;
-    background: #e1f5fe;
-    color: #01579b;
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-right: 5px;
-}
-
-.btn {
+.specialization-tag {
     display: inline-block;
-    margin-top: 1rem;
-    color: var(--accent-color);
-    text-decoration: none;
+    background: #e7f1ff;
+    color: var(--accent-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
     font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+/* Main Content Area */
+main {
+    padding: 0 10% 4rem 10%;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--accent-blue);
+    padding-left: 1rem;
+}
+
+/* Responsive Grid for Skills/Projects */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-color: var(--accent-blue);
+}
+
+footer {
+    text-align: center;
+    padding: 4rem 0;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.85rem;
 }
