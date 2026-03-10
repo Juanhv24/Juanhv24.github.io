@@ -1,13 +1,16 @@
 # Site settings
 title: Juan | Data Scientist
-description: Portfolio specializing in Risk Analysis, Machine Learning, and Statistical Analytics.
-baseurl: ""
+description: Specialized in Statistical Analytics, Risk Modeling, and Machine Learning for the Financial Sector.
+baseurl: "" 
 url: "https://juanhv24.github.io"
 
 # User info
-github_username: juanhv24
-linkedin_username: juan-hernandez-vargas 
+github_username: Juanhv24
+linkedin_username: juan-hernandez-vargas
 email: juandanihv@gmail.com
+
+# Academic Focus
+education: "Specialization in Statistical Analytics for Data Science - Universidad de La Salle"
 
 # Build settings
 theme: jekyll-theme-minimal
