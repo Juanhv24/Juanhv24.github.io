@@ -3,10 +3,10 @@
     --font-main: 'Plus Jakarta Sans', sans-serif;
     --primary-bg: #ffffff;
     --secondary-bg: #f8f9fa;
-    --text-main: #212529;
-    --text-muted: #6c757d;
-    --accent-blue: #0056b3; 
-    --border-color: #dee2e6;
+    --text-main: #1a1d21;
+    --text-muted: #64748b;
+    --accent-blue: #0070f3; 
+    --border-color: #e2e8f0;
     --nav-bg: rgba(255, 255, 255, 0.95);
 }
 
@@ -28,24 +28,25 @@ body.dark-mode {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-main); /* This replaces 'Inter' */
     color: var(--text-main);
     background-color: var(--primary-bg);
     line-height: 1.6;
+    padding-top: 80px; /* Moves content down so Navbar doesn't cover it */
 }
 
-/* Navigation */
+/* Navigation Container */
 nav {
     padding: 1rem 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border-color);
-    position: fixed; /* Changed from sticky to fixed for better stability */
+    position: fixed;
     top: 0;
     width: 100%;
     background: var(--nav-bg);
-    backdrop-filter: blur(10px); /* Modern glass effect */
+    backdrop-filter: blur(10px);
     z-index: 1000;
     transition: background 0.3s ease;
 }
@@ -55,10 +56,10 @@ body {
 }
 
 .logo {
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    color: var(--accent-blue);
+    font-weight: 800; /* Extra thick */
+    font-size: 1.1rem;
+    letter-spacing: -0.5px;
+    color: var(--text-main);
 }
 
 nav ul {
@@ -70,9 +71,9 @@ nav ul {
 nav a {
     text-decoration: none;
     color: var(--text-main);
-    font-weight: 500;
-    font-size: 0.9rem;
-    transition: color 0.3s;
+    font-weight: 600; 
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
