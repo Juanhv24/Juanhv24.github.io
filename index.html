@@ -10,13 +10,22 @@
 <body>
 
     <header style="width: 100%; max-width: 100%; padding: 0;">
-        <nav>
+        <nav id="navbar">
             <div class="logo">JH.DS</div>
-            <ul>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="theme-switch-wrapper">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </button>
+            </div>
         </nav>
         <div class="hero" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; max-width: 1200px; margin: 4rem auto; padding: 0 2rem; gap: 4rem; flex-wrap: wrap;">
         
