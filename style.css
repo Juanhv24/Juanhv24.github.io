@@ -1,5 +1,6 @@
 /* Variables for easy branding */
 :root {
+    --font-main: 'Plus Jakarta Sans', sans-serif;
     --primary-bg: #ffffff;
     --secondary-bg: #f8f9fa;
     --text-main: #212529;
