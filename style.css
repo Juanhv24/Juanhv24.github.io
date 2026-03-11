@@ -82,22 +82,53 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    padding: 6rem 10%;
-    text-align: left; /* Aligning left looks more modern/developer-style */
-    max-width: 900px;
+    padding: 8rem 10% 6rem 10%; /* Increased top padding for the fixed nav */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 4rem;
 }
+
 
 .hero h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    line-height: 1.1;
+    font-size: 5rem; /* Massive size */
+    font-weight: 800; /* Maximum thickness */
+    margin-bottom: 1.2rem;
+    line-height: 1; /* Tight line height for impact */
+    letter-spacing: -3.5px; /* Tight letter spacing for that "editorial" look */
+    color: var(--text-main);
 }
 
-.hero p {
-    font-size: 1.25rem;
-    color: var(--text-muted);
+
+.hero h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-main);
     margin-bottom: 1.5rem;
+    border-left: none; /* Removing the border-left from the global h2 here */
+    padding-left: 0;
+}
+
+
+.hero p {
+    font-size: 1.35rem;
+    max-width: 600px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+}
+
+
+.hero .intro-text {
+    color: var(--accent-blue);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
 }
 
 .specialization-tag {
