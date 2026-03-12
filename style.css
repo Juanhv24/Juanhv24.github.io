@@ -287,24 +287,31 @@ body.dark-mode .skill-pill.intermediate {
 .pill-item {
     text-decoration: none;
     color: var(--text-main);
-    background: var(--primary-bg);
-    border: 1px solid transparent; /* No border by default */
-    border-radius: 12px; /* A clean, modern rounded look */
-    padding: 1rem 2rem; /* Comfortable button size */
+    background: var(--secondary-bg); /* Match the card background */
+    border: 1px solid var(--border-color); /* Visible border by default */
+    border-radius: 12px;
+    padding: 1rem 2rem;
     font-weight: 700;
     font-size: 1rem;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     align-items: center;
-    gap: 0.8rem; /* Space between icon and text */
+    justify-content: center;
+    gap: 0.8rem;
+    min-width: 200px; /* Ensures they have a consistent size */
 }
 
 .pill-item:hover {
-    transform: translateY(-5px); /* Existing lift effect */
-    border-color: var(--accent-blue); /* Colorful pop on hover */
-    background: rgba(0, 112, 243, 0.05); /* Very subtle background hint */
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
+    background: rgba(0, 112, 243, 0.05);
     color: var(--accent-blue);
     box-shadow: 0 10px 20px rgba(0, 112, 243, 0.1);
+}
+
+/* Ensure icons don't turn blue text-only */
+.pill-item span {
+    font-size: 1.2rem;
 }
 
 /* Dark Mode adjust */
