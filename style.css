@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Adjust this based on your navbar height */
 }
 
 /* 1. Variables & Global Setup */
@@ -280,16 +281,29 @@ body.dark-mode .skill-pill.intermediate {
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
-/* Contact Card */
+/* 6. Contact Section - Clean & Open */
+#contact {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+    text-align: center;
+    background: transparent; /* Removes the gray enclosure */
+    border: none;
+}
+
+/* 7. Contact Card Links (Matching Skills section style) */
 .contact-card-link {
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 1.2rem;
     padding: 1.2rem;
-    background: var(--secondary-bg); /* Match the background of your skills cards */
+    background: var(--secondary-bg); /* Matches the light gray of your skills cards */
     border: 1px solid var(--border-color);
-    border-radius: 16px; /* Matches your main card radius */
+    border-radius: 16px; 
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -310,7 +324,37 @@ body.dark-mode .skill-pill.intermediate {
     font-size: 1.3rem;
 }
 
-/* Dark Mode Consistency */
-body.dark-mode .contact-card-link {
-    background: #1e1e1e;
+/* 8. Footer */
+footer {
+    text-align: center;
+    padding: 4rem 0;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.85rem;
 }
+
+/* 9. Theme Toggle */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#theme-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.icon-sun { display: none; }
+.icon-moon { display: block; }
+
+body.dark-mode .icon-sun { display: block; }
+body.dark-mode .icon-moon { display: none; }
+body.dark-mode .contact-card-link { background: #1e1e1e; }
