@@ -6,22 +6,6 @@ html {
 
 
 
-and is not being smooth
-
-
-
-am I missing something else
-
-
-
-html {
-
-    scroll-behavior: smooth;
-
-}
-
-
-
 /* 1. Variables & Global Setup */
 
 :root {
