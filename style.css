@@ -275,3 +275,31 @@ body.dark-mode .skill-pill.intermediate {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
+
+/* Contact Section Specifics */
+.contact-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background: var(--primary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact-pill:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    box-shadow: 0 10px 20px rgba(0, 112, 243, 0.1);
+}
+
+/* Dark Mode adjustment */
+body.dark-mode .contact-pill {
+    background: var(--secondary-bg);
+}
