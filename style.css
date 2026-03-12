@@ -1,235 +1,623 @@
-/* --- 0. Master Reset & Smooth Scroll --- */
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Prevents headers from hiding under the navbar */
-}
+/* 1. Variables & Global Setup */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* --- 1. Variables --- */
 :root {
+
     --font-main: 'Plus Jakarta Sans', sans-serif;
+
     --primary-bg: #ffffff;
+
     --secondary-bg: #f8f9fa;
+
     --text-main: #1a1d21;
+
     --text-muted: #64748b;
+
     --accent-blue: #0070f3; 
+
     --border-color: #e2e8f0;
+
     --nav-bg: rgba(255, 255, 255, 0.95);
+
 }
+
+
+
+/* Dark Mode Overrides */
 
 body.dark-mode {
+
     --primary-bg: #121212;
+
     --secondary-bg: #1e1e1e;
+
     --text-main: #f8f9fa;
+
     --text-muted: #a0a0a0;
+
     --accent-blue: #3d9afc;
+
     --border-color: #333333;
+
     --nav-bg: rgba(18, 18, 18, 0.95);
+
 }
+
+
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
 
 body {
+
     font-family: var(--font-main);
+
     color: var(--text-main);
+
     background-color: var(--primary-bg);
+
     line-height: 1.6;
+
     padding-top: 80px; 
+
     transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
-/* --- 2. Navigation --- */
+
+
+/* 2. Navigation Bar */
+
 nav {
+
     padding: 1rem 10%;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     border-bottom: 1px solid var(--border-color);
+
     position: fixed;
+
     top: 0;
+
     width: 100%;
+
     background: var(--nav-bg);
+
     backdrop-filter: blur(10px);
+
     z-index: 1000;
+
+    transition: background 0.3s ease;
+
 }
+
+
 
 .logo {
+
     font-weight: 800;
+
     font-size: 1.4rem;
+
     letter-spacing: -0.5px;
+
     color: var(--text-main);
+
 }
+
+
 
 nav ul {
+
     display: flex;
+
     gap: 2.5rem;
+
     list-style: none;
+
 }
+
+
 
 nav a {
+
     text-decoration: none;
+
     color: var(--text-main);
+
     font-weight: 600; 
+
     font-size: 1.05rem;
+
     transition: color 0.2s ease;
+
+    padding: 0.5rem 0.2rem;
+
 }
+
+
 
 nav a:hover {
+
     color: var(--accent-blue);
+
 }
 
-/* --- 3. Hero Section --- */
+
+
+/* 3. Hero Section */
+
 .hero {
+
     padding: 8rem 10% 6rem 10%;
+
     display: flex;
+
     flex-direction: row;
+
     align-items: center;
+
     justify-content: space-between;
+
     width: 100%;
+
     max-width: 1300px;
+
     margin: 0 auto;
+
     gap: 4rem;
+
 }
+
+
 
 .hero h1 {
+
     font-size: 5rem;
+
     font-weight: 800;
+
     margin-bottom: 1.2rem;
+
     line-height: 1;
+
     letter-spacing: -3.5px;
+
+    color: var(--text-main);
+
 }
+
+
 
 .hero h2 {
+
     font-size: 2.2rem;
+
     font-weight: 700;
+
+    color: var(--text-main);
+
     margin-bottom: 1.5rem;
+
 }
+
+
+
+.hero p {
+
+    font-size: 1.35rem;
+
+    max-width: 600px;
+
+    line-height: 1.6;
+
+    color: var(--text-muted);
+
+}
+
+
 
 .hero .intro-text {
+
     color: var(--accent-blue);
+
     font-weight: 700;
+
     font-size: 1.2rem;
+
     margin-bottom: 0.5rem;
+
+    letter-spacing: 0.5px;
+
 }
 
-/* --- 4. Global Components --- */
+
+
+.specialization-tag {
+
+    display: inline-block;
+
+    background: #e7f1ff;
+
+    color: var(--accent-blue);
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    font-size: 0.85rem;
+
+    margin-bottom: 2rem;
+
+}
+
+
+
+/* 4. Content Sections */
+
 main {
+
     padding: 0 10% 4rem 10%;
+
 }
 
-.card {
-    background: var(--secondary-bg);
-    padding: 2.5rem;
-    border-radius: 16px; 
-    border: 1px solid var(--border-color);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+
+
+h2 {
+
+    font-size: 2.2rem;
+
+    font-weight: 800;
+
+    margin-bottom: 2.5rem;
+
+    letter-spacing: -1px;
+
+    color: var(--text-main);
+
+    border-left: 6px solid var(--accent-blue);
+
+    padding-left: 1.2rem;
+
 }
 
-.card:hover {
-    transform: translateY(-8px); 
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
-    border-color: var(--accent-blue);
-}
+
 
 .grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
     gap: 2rem;
+
 }
 
-.btn {
-    display: inline-flex;
-    padding: 0.8rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: all 0.3s;
-}
 
-/* --- 5. Skill Pills --- */
-.skill-pill {
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    border: 1px solid transparent;
-}
 
-.skill-pill.proficient {
-    background: rgba(40, 167, 69, 0.05);
-    border-color: rgba(40, 167, 69, 0.2);
-    color: #28a745;
-}
+/* 5. Cards */
 
-.skill-pill.intermediate {
-    background: rgba(0, 123, 255, 0.05);
-    border-color: rgba(0, 123, 255, 0.2);
-    color: #007bff;
-}
+.card {
 
-/* --- 6. Contact Section (Open Design) --- */
-#contact {
-    margin-top: 8rem;
-    margin-bottom: 8rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.contact-card-link {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    padding: 1.2rem;
     background: var(--secondary-bg);
+
+    padding: 2.5rem;
+
+    border-radius: 16px; 
+
     border: 1px solid var(--border-color);
-    border-radius: 16px;
-    transition: all 0.3s ease;
+
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
 }
 
-.contact-card-link:hover {
-    transform: translateX(10px);
+
+
+.card h3 {
+
+    font-size: 1.4rem;
+
+    font-weight: 700;
+
+    color: var(--text-main);
+
+}
+
+
+
+.card p {
+
+    font-size: 1rem;
+
+    color: var(--text-muted);
+
+}
+
+
+
+.card .btn {
+
+    font-weight: 700;
+
+    font-size: 0.9rem;
+
+    margin-top: auto;
+
+    color: var(--accent-blue);
+
+    text-decoration: none;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+}
+
+
+
+.card:hover {
+
+    transform: translateY(-8px); 
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
+
     border-color: var(--accent-blue);
+
 }
 
-.contact-icon-box {
-    background: rgba(0, 112, 243, 0.1);
-    width: 50px;
-    height: 50px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-}
 
-/* --- 7. Theme Toggle & Footer --- */
-#theme-toggle {
-    background: none;
+
+/* 6. Contact & Footer */
+
+#contact {
+
+    margin-top: 6rem;
+
+    padding: 5rem 2rem;
+
+    background: var(--secondary-bg);
+
+    border-radius: 24px;
+
+    text-align: center;
+
     border: 1px solid var(--border-color);
-    border-radius: 50%;
-    padding: 8px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
+
 }
 
-.icon-sun { display: none; }
-.icon-moon { display: block; }
-body.dark-mode .icon-sun { display: block; }
-body.dark-mode .icon-moon { display: none; }
+
 
 footer {
+
     text-align: center;
+
     padding: 4rem 0;
+
     border-top: 1px solid var(--border-color);
+
     color: var(--text-muted);
+
+    font-size: 0.85rem;
+
+}
+
+
+
+/* 7. Theme Toggle */
+
+.theme-switch-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+
+#theme-toggle {
+
+    background: none;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 50%;
+
+    padding: 8px;
+
+    cursor: pointer;
+
+    font-size: 1.2rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: all 0.3s ease;
+
+}
+
+
+
+.icon-sun { display: none; }
+
+.icon-moon { display: block; }
+
+
+
+body.dark-mode .icon-sun { display: block; }
+
+body.dark-mode .icon-moon { display: none; }
+
+
+
+/* Skill Pills Styling */
+
+.skill-pill {
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 8px;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    border: 1px solid transparent;
+
+    transition: all 0.2s ease;
+
+}
+
+
+
+/* Color Coding for proficiency */
+
+.skill-pill.proficient {
+
+    background: rgba(40, 167, 69, 0.05);
+
+    border-color: rgba(40, 167, 69, 0.2);
+
+    color: #28a745;
+
+}
+
+
+
+.skill-pill.intermediate {
+
+    background: rgba(0, 123, 255, 0.05);
+
+    border-color: rgba(0, 123, 255, 0.2);
+
+    color: #007bff;
+
+}
+
+
+
+/* Dark Mode Tweaks for Pills */
+
+body.dark-mode .skill-pill.proficient {
+
+    background: rgba(40, 167, 69, 0.1);
+
+    color: #34ce57;
+
+}
+
+
+
+body.dark-mode .skill-pill.intermediate {
+
+    background: rgba(0, 123, 255, 0.1);
+
+    color: #4dabf7;
+
+}
+
+
+
+.skill-pill:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+
+}
+
+
+
+/* Contact Card */
+
+.contact-card-link {
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.2rem;
+
+    padding: 1.2rem;
+
+    background: var(--secondary-bg); /* Match the background of your skills cards */
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 16px; /* Matches your main card radius */
+
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+
+
+.contact-card-link:hover {
+
+    transform: translateX(10px); /* Modern horizontal slide */
+
+    border-color: var(--accent-blue);
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+
+}
+
+
+
+.contact-icon-box {
+
+    background: rgba(0, 112, 243, 0.1);
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1.3rem;
+
+}
+
+
+
+/* Dark Mode Consistency */
+
+body.dark-mode .contact-card-link {
+
+    background: #1e1e1e;
+
 }
