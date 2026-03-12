@@ -276,48 +276,37 @@ body.dark-mode .skill-pill.intermediate {
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
-/* Contact Section - Clean & Open Style */
-.contact-pill-container {
+/* Contact Card */
+.contact-card-link {
+    text-decoration: none;
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    margin-top: 3rem; /* Adds space between the text and the buttons */
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem;
+    background: var(--secondary-bg); /* Match the background of your skills cards */
+    border: 1px solid var(--border-color);
+    border-radius: 16px; /* Matches your main card radius */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.pill-item {
-    text-decoration: none;
-    color: var(--text-main);
-    /* We use primary-bg or a very subtle secondary to keep it 'Open' */
-    background: var(--primary-bg); 
-    border: 1px solid var(--border-color);
-    border-radius: 14px; /* Matches your expertise cards */
-    padding: 1rem 2.2rem;
-    font-weight: 700;
-    font-size: 1.05rem;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.contact-card-link:hover {
+    transform: translateX(10px); /* Modern horizontal slide */
+    border-color: var(--accent-blue);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.contact-icon-box {
+    background: rgba(0, 112, 243, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
-    min-width: 180px; 
+    font-size: 1.3rem;
 }
 
-.pill-item:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-blue);
-    background: rgba(0, 112, 243, 0.05);
-    color: var(--accent-blue);
-    box-shadow: 0 10px 25px rgba(0, 112, 243, 0.15);
-}
-
-/* Icons styling */
-.pill-item span {
-    font-size: 1.2rem;
-}
-
-/* Dark Mode adjustment - Ensures it stays visible on dark gray */
-body.dark-mode .pill-item {
+/* Dark Mode Consistency */
+body.dark-mode .contact-card-link {
     background: #1e1e1e;
-    border-color: #333333;
 }
