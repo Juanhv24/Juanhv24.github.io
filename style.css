@@ -277,29 +277,37 @@ body.dark-mode .skill-pill.intermediate {
 }
 
 /* Contact Section Specifics */
-.contact-pill {
+.contact-card {
     display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    padding: 1rem 2rem;
-    background: var(--primary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
+    justify-content: center;
+    gap: 1.5rem; /* Space between links */
+    flex-wrap: wrap; /* Wraps on smaller screens */
+}
+
+.pill-item {
     text-decoration: none;
     color: var(--text-main);
+    background: var(--primary-bg);
+    border: 1px solid transparent; /* No border by default */
+    border-radius: 12px; /* A clean, modern rounded look */
+    padding: 1rem 2rem; /* Comfortable button size */
     font-weight: 700;
     font-size: 1rem;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem; /* Space between icon and text */
 }
 
-.contact-pill:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-blue);
+.pill-item:hover {
+    transform: translateY(-5px); /* Existing lift effect */
+    border-color: var(--accent-blue); /* Colorful pop on hover */
+    background: rgba(0, 112, 243, 0.05); /* Very subtle background hint */
     color: var(--accent-blue);
     box-shadow: 0 10px 20px rgba(0, 112, 243, 0.1);
 }
 
-/* Dark Mode adjustment */
-body.dark-mode .contact-pill {
+/* Dark Mode adjust */
+body.dark-mode .pill-item {
     background: var(--secondary-bg);
 }
