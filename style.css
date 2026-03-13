@@ -622,86 +622,70 @@ body.dark-mode .contact-card-link {
 
 }
 
-/* --- 8. Final Mobile Responsiveness --- */
+/* --- 8. Final Mobile Responsiveness (The Overflow Killer) --- */
 
 @media (max-width: 768px) {
-    /* 1. Global Scaling */
+    /* 1. Global Reset */
     body { padding-top: 140px !important; }
-    main { padding: 0 5% 2rem 5% !important; }
+    main { padding: 0 4% 2rem 4% !important; }
 
-    h2 { 
-        font-size: 1.8rem !important; 
-        margin-bottom: 1.5rem !important;
-    }
+    /* 2. Fix Navigation */
+    nav { flex-direction: column !important; padding: 1rem !important; }
+    nav ul { gap: 0.8rem !important; justify-content: center; }
 
-    /* 2. Fix Navigation Overlap */
-    nav {
+    /* 3. The Project & Card Fix */
+    /* Target the Card itself */
+    #projects .card, .card {
         flex-direction: column !important;
-        padding: 1rem 5% !important;
-        height: auto !important;
-    }
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.8rem !important;
-    }
-
-    /* 3. Hero Section & Social Icons */
-    .hero {
-        flex-direction: column-reverse !important;
-        padding: 2rem 5% !important;
-        text-align: center !important;
-    }
-    .hero h1 { font-size: 2.5rem !important; }
-    
-    .hero img[src*="cdn-icons-png"], 
-    .hero img[src*="flaticon"] {
-        width: 32px !important;
-        height: 32px !important;
-    }
-
-    /* 4. Project Card Fix (Crucial) */
-    #projects .card {
-        flex-direction: column !important;
-        padding: 1.5rem !important; /* Reduced padding for more space */
+        padding: 1.2rem !important; /* Tightened padding for more room */
         gap: 1.5rem !important;
-        align-items: center !important;
+        width: 100% !important;
+        overflow: hidden; /* Hard stop for anything trying to leak out */
     }
 
-    /* This unsets the 300px limit that causes the overflow */
-    #projects .card > div {
-        min-width: 100% !important; 
+    /* Target the child DIVs (This kills the 300px inline style) */
+    #projects .card > div, 
+    .card > div {
+        min-width: 0 !important; /* Forces the 300px to die */
         width: 100% !important;
+        flex: none !important;
         text-align: center !important;
     }
 
-    #projects h3 {
-        font-size: 1.4rem !important; /* Smaller titles */
-    }
-
-    /* 5. Stop Image/Chart Overflow */
+    /* Target the Images and Placeholders */
     #projects .card img, 
-    #projects .card div[style*="min-height"] {
+    #projects .card div[style*="min-height"],
+    .card img {
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
-        min-height: 180px !important; /* Smaller placeholder on mobile */
+        border-radius: 8px !important;
+        margin: 0 auto !important;
     }
 
-    /* 6. Other Layouts */
-    #about > div[style*="display: flex"],
-    #contact > div[style*="display: flex"] {
+    /* Shrink the headers so they fit on one line */
+    #projects h3 {
+        font-size: 1.3rem !important;
+        line-height: 1.3 !important;
+    }
+
+    /* 4. Hero Section */
+    .hero {
+        flex-direction: column-reverse !important;
+        text-align: center !important;
+        padding: 2rem 5% !important;
+    }
+    .hero h1 { font-size: 2.2rem !important; }
+
+    /* 5. Force Contact and About to stack */
+    #about > div, #contact > div {
         flex-direction: column !important;
         align-items: center !important;
-        text-align: center !important;
-        gap: 2rem !important;
     }
 
-    #skills .grid {
-        grid-template-columns: 1fr !important;
-    }
+    /* 6. Skills Grid */
+    #skills .grid { grid-template-columns: 1fr !important; }
 
-    .contact-card-link, #resume .btn, .hero .btn {
-        width: 100% !important;
-    }
+    /* 7. Button full width */
+    .contact-card-link, .btn { width: 100% !important; }
 }
