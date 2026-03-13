@@ -622,24 +622,25 @@ body.dark-mode .contact-card-link {
 
 }
 
-/* --- 8. Complete Mobile Responsiveness --- */
+/* --- 8. Final Mobile Responsiveness --- */
 
 @media (max-width: 768px) {
-    /* 1. Global Scaling */
-    body {
-        padding-top: 140px; /* More space for the stacked mobile nav */
+    /* 1. Global Layout Reset */
+    body { 
+        padding-top: 160px !important; /* Extra room for stacked nav */
     }
 
-    main {
-        padding: 0 5% 2rem 5% !important;
+    main { 
+        padding: 0 5% 2rem 5% !important; 
     }
 
-    h2 {
-        font-size: 1.8rem !important;
+    h2 { 
+        font-size: 1.8rem !important; 
         margin-bottom: 1.5rem !important;
+        line-height: 1.2 !important;
     }
 
-    /* 2. Navigation Fix */
+    /* 2. Fix Navigation Overlap */
     nav {
         flex-direction: column !important;
         padding: 1rem 5% !important;
@@ -649,81 +650,61 @@ body.dark-mode .contact-card-link {
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1rem !important;
+        gap: 0.8rem !important;
         margin-top: 10px;
     }
 
-    nav a {
-        font-size: 0.9rem !important;
-    }
-
-    /* 3. Hero Section Stacking */
+    /* 3. Hero Section & Social Icons */
     .hero {
         flex-direction: column-reverse !important;
+        text-align: center !important;
         padding: 2rem 5% !important;
-        text-align: center;
         gap: 2rem !important;
     }
 
-    .hero h1 {
-        font-size: 2.8rem !important;
-        letter-spacing: -1.5px !important;
+    .hero h1 { 
+        font-size: 2.5rem !important; 
     }
 
-    .hero p {
-        font-size: 1.1rem !important;
-        margin: 0 auto 1.5rem auto !important;
+    /* Surgical fix for the massive LinkedIn/GitHub icons */
+    .hero img[src*="cdn-icons-png"], 
+    .hero img[src*="flaticon"] {
+        width: 32px !important;
+        height: 32px !important;
+        margin: 0 auto;
     }
 
-    .hero img {
-        width: 220px !important;
-        height: 220px !important;
+    /* 4. Stop Image/Chart Overflow */
+    #projects .card img, 
+    #projects .card div[style*="min-height"],
+    .card img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+        margin: 0 auto !important;
     }
 
-    /* Center hero buttons */
-    .hero div[style*="display: flex"] {
-        justify-content: center !important;
-        flex-wrap: wrap;
-    }
-
-    /* 4. About Section Fix */
-    #about > div[style*="display: flex"] {
+    /* 5. Force Stacking on Row Layouts */
+    #about > div[style*="display: flex"],
+    #contact > div[style*="display: flex"],
+    .card[style*="display: flex"] {
         flex-direction: column !important;
         align-items: center !important;
+        text-align: center !important;
         gap: 2rem !important;
     }
 
-    #about img {
-        width: 100% !important;
-        max-width: 300px !important;
-    }
-
-    /* 5. Projects & Resume Stacking */
-    #projects .card, #resume .card {
-        flex-direction: column !important;
-        padding: 1.5rem !important;
-        gap: 1.5rem !important;
-    }
-
-    #projects img, .card div[style*="height: 300px"] {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 200px !important;
-    }
-
-    /* 6. Technical Expertise Grid */
+    /* 6. Skills Grid Fix */
     #skills .grid {
-        grid-template-columns: 1fr !important; /* One column on mobile */
+        grid-template-columns: 1fr !important;
     }
 
-    /* 7. Contact Section Stacking */
-    #contact > div[style*="display: flex"] {
-        flex-direction: column !important;
-        gap: 3rem !important;
-        text-align: center;
-    }
-
-    .contact-card-link {
-        width: 100% !important; /* Full width for easier tapping */
+    /* 7. Full-Width Buttons for Thumbs */
+    .contact-card-link, 
+    #resume .btn,
+    .hero .btn {
+        width: 100% !important;
+        justify-content: center;
     }
 }
