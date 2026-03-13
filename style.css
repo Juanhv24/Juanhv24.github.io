@@ -625,45 +625,63 @@ body.dark-mode .contact-card-link {
 /* --- 8. Final Mobile Responsiveness (The Overflow Killer) --- */
 
 @media (max-width: 768px) {
-    /* 1. Global Reset & Header Spacing */
+    /* 1. Global Reset & Overflow Protection */
+    html, body {
+        overflow-x: hidden; /* This stops the page from being 'pushed' to the right */
+        width: 100%;
+        position: relative;
+    }
+
     body { 
-        padding-top: 130px !important; /* Adjusted to fit the new nav height */
+        padding-top: 140px !important; /* Adjusted for the stacked nav */
+    }
+
+    main { 
+        padding: 0 5% 2rem 5% !important; 
+        width: 100% !important;
     }
 
     /* 2. Refined Mobile Navigation */
     nav { 
+        left: 0;
+        width: 100%;
         flex-direction: column !important; 
-        padding: 0.8rem 1rem !important; 
+        padding: 0.8rem 0 !important; /* Removed side padding to save space */
         height: auto !important;
         align-items: center !important;
-        gap: 0.5rem !important;
+        gap: 0.4rem !important;
     }
 
     .logo {
-        font-size: 1.2rem !important;
+        font-size: 1.1rem !important;
         margin-bottom: 0.2rem !important;
     }
 
     nav ul { 
         display: flex !important;
-        flex-direction: row !important; /* Keep links in a row */
-        flex-wrap: wrap !important; /* Let them wrap if the screen is tiny */
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 0.8rem 1rem !important; /* Vertical and horizontal spacing */
-        margin-bottom: 0.3rem !important;
+        gap: 0.5rem 0.8rem !important; /* Reduced gap to prevent links from overflowing */
+        padding: 0 10px !important;
+        width: 100% !important;
     }
 
     nav a { 
         font-size: 0.85rem !important; 
-        padding: 0.3rem 0.5rem !important;
+        padding: 0.2rem 0.4rem !important;
+        white-space: nowrap; /* Prevents a single word like 'Resume' from breaking */
     }
 
     .theme-switch-wrapper {
         margin-top: 5px !important;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     #theme-toggle {
-        padding: 6px !important;
+        padding: 5px !important;
         font-size: 1rem !important;
     }
 
