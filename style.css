@@ -625,13 +625,47 @@ body.dark-mode .contact-card-link {
 /* --- 8. Final Mobile Responsiveness (The Overflow Killer) --- */
 
 @media (max-width: 768px) {
-    /* 1. Global Reset */
-    body { padding-top: 140px !important; }
-    main { padding: 0 4% 2rem 4% !important; }
+    /* 1. Global Reset & Header Spacing */
+    body { 
+        padding-top: 130px !important; /* Adjusted to fit the new nav height */
+    }
 
-    /* 2. Fix Navigation */
-    nav { flex-direction: column !important; padding: 1rem !important; }
-    nav ul { gap: 0.8rem !important; justify-content: center; }
+    /* 2. Refined Mobile Navigation */
+    nav { 
+        flex-direction: column !important; 
+        padding: 0.8rem 1rem !important; 
+        height: auto !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+    }
+
+    .logo {
+        font-size: 1.2rem !important;
+        margin-bottom: 0.2rem !important;
+    }
+
+    nav ul { 
+        display: flex !important;
+        flex-direction: row !important; /* Keep links in a row */
+        flex-wrap: wrap !important; /* Let them wrap if the screen is tiny */
+        justify-content: center !important;
+        gap: 0.8rem 1rem !important; /* Vertical and horizontal spacing */
+        margin-bottom: 0.3rem !important;
+    }
+
+    nav a { 
+        font-size: 0.85rem !important; 
+        padding: 0.3rem 0.5rem !important;
+    }
+
+    .theme-switch-wrapper {
+        margin-top: 5px !important;
+    }
+
+    #theme-toggle {
+        padding: 6px !important;
+        font-size: 1rem !important;
+    }
 
     /* 3. The Project & Card Fix */
     /* Target the Card itself */
