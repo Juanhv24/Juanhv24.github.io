@@ -622,73 +622,108 @@ body.dark-mode .contact-card-link {
 
 }
 
-/* --- 8. Mobile Responsiveness --- */
+/* --- 8. Complete Mobile Responsiveness --- */
 
 @media (max-width: 768px) {
-    /* Adjust Navigation */
+    /* 1. Global Scaling */
+    body {
+        padding-top: 140px; /* More space for the stacked mobile nav */
+    }
+
+    main {
+        padding: 0 5% 2rem 5% !important;
+    }
+
+    h2 {
+        font-size: 1.8rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* 2. Navigation Fix */
     nav {
-        padding: 1rem 5%;
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: column !important;
+        padding: 1rem 5% !important;
+        height: auto !important;
     }
 
     nav ul {
-        gap: 1rem;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 1rem !important;
+        margin-top: 10px;
     }
 
-    /* Hero Section Stacking */
+    nav a {
+        font-size: 0.9rem !important;
+    }
+
+    /* 3. Hero Section Stacking */
     .hero {
-        flex-direction: column-reverse; /* Image on top, text below */
-        text-align: center;
-        padding: 4rem 5% 2rem 5%;
-        gap: 2rem;
-    }
-
-    .hero h1 {
-        font-size: 3rem; /* Scaled down from 5rem */
-        letter-spacing: -1px;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-        margin: 0 auto 1.5rem auto;
-    }
-
-    .hero div[style*="display: flex"] {
-        justify-content: center; /* Center the buttons and social icons */
-    }
-
-    /* About Section Image Scaling */
-    #about > div[style*="display: flex"] {
-        flex-direction: column !important;
-        align-items: center;
+        flex-direction: column-reverse !important;
+        padding: 2rem 5% !important;
         text-align: center;
         gap: 2rem !important;
     }
 
-    #about img {
-        width: 250px !important; /* Smaller profile pic on mobile */
+    .hero h1 {
+        font-size: 2.8rem !important;
+        letter-spacing: -1.5px !important;
     }
 
-    /* Contact Section Stacking */
+    .hero p {
+        font-size: 1.1rem !important;
+        margin: 0 auto 1.5rem auto !important;
+    }
+
+    .hero img {
+        width: 220px !important;
+        height: 220px !important;
+    }
+
+    /* Center hero buttons */
+    .hero div[style*="display: flex"] {
+        justify-content: center !important;
+        flex-wrap: wrap;
+    }
+
+    /* 4. About Section Fix */
+    #about > div[style*="display: flex"] {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 2rem !important;
+    }
+
+    #about img {
+        width: 100% !important;
+        max-width: 300px !important;
+    }
+
+    /* 5. Projects & Resume Stacking */
+    #projects .card, #resume .card {
+        flex-direction: column !important;
+        padding: 1.5rem !important;
+        gap: 1.5rem !important;
+    }
+
+    #projects img, .card div[style*="height: 300px"] {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 200px !important;
+    }
+
+    /* 6. Technical Expertise Grid */
+    #skills .grid {
+        grid-template-columns: 1fr !important; /* One column on mobile */
+    }
+
+    /* 7. Contact Section Stacking */
     #contact > div[style*="display: flex"] {
         flex-direction: column !important;
-        text-align: center;
         gap: 3rem !important;
+        text-align: center;
     }
 
     .contact-card-link {
-        width: 100%; /* Links take full width for easier tapping */
-    }
-
-    /* Global padding adjustments */
-    main {
-        padding: 0 5% 2rem 5%;
-    }
-
-    h2 {
-        font-size: 1.8rem;
+        width: 100% !important; /* Full width for easier tapping */
     }
 }
