@@ -465,8 +465,8 @@ body.dark-mode .icon-moon { display: none; }
 
 /* Individual project card */
 .proj-card {
-    min-width: 340px;
-    max-width: 340px;
+    min-width: 420px;
+    max-width: 420px;
     scroll-snap-align: start;
     flex-shrink: 0;
     background: var(--primary-bg);
@@ -619,10 +619,11 @@ body.dark-mode .icon-moon { display: none; }
 /* Chart preview image at top of project card */
 .proj-img {
     width: 100%;
-    height: 160px;
-    object-fit: cover;
+    height: 185px;
+    object-fit: contain;
     border-radius: 10px;
     border: 1px solid var(--border-color);
+    background: #0d1117;
     display: block;
 }
 
@@ -963,8 +964,8 @@ footer {
 
     /* Projects carousel — keep scrollable, make cards a bit narrower */
     .proj-card {
-        min-width: 290px;
-        max-width: 290px;
+        min-width: 320px;
+        max-width: 320px;
     }
 
     /* Skills grid */
