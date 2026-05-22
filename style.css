@@ -323,6 +323,14 @@ body.dark-mode .icon-moon { display: none; }
     padding: 0;
 }
 
+.resume-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
 
 /* 6. ABOUT
    ══════════════════════════════════════════════════════════════════════ */
@@ -606,6 +614,16 @@ body.dark-mode .icon-moon { display: none; }
     padding: 0.25rem 0.65rem;
     border-radius: 6px;
     border: 1px solid var(--border-color);
+}
+
+/* Chart preview image at top of project card */
+.proj-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    display: block;
 }
 
 .proj-link {

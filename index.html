@@ -116,9 +116,14 @@
         <div class="card resume-card">
             <h3>My Professional Resume</h3>
             <p>Data Scientist specializing in Statistical Analytics & Risk Management for the Banking and Fintech sectors.</p>
-            <a href="assets/Juan_Hernandez_Resume.pdf" download class="btn btn-primary btn-large">
-                Download PDF <span>📩</span>
-            </a>
+            <div class="resume-buttons">
+                <a href="cvs/Juan_Hernandez_CV_EN.pdf" download class="btn btn-primary btn-large">
+                    English CV <span>📩</span>
+                </a>
+                <a href="cvs/Juan_Hernandez_CV_ES.pdf" download class="btn btn-secondary btn-large">
+                    CV en Español <span>📩</span>
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -136,6 +141,7 @@
 
             <!-- PROJECT 1: Beta Bank — Churn Prediction -->
             <div class="proj-card">
+                <img src="images/beta_model_comparison.png" alt="Model Performance Chart" class="proj-img">
                 <div class="proj-top">
                     <span class="proj-domain">Fintech · Risk Analytics</span>
                     <h3>Customer Churn Prediction & Explainable AI</h3>
@@ -143,21 +149,20 @@
                 </div>
                 <div class="proj-impact">
                     <strong>Business Impact</strong>
-                    <p>Identified high-risk customer segments — older, inactive clients in Germany — enabling targeted retention campaigns to protect baseline revenue.</p>
+                    <p>Identified high-risk segments — older, inactive clients in Germany — enabling targeted retention campaigns. Random Forest + SMOTE delivered the best balance of precision and recall.</p>
                 </div>
                 <div class="proj-metrics">
-                    <!-- UPDATE: replace — with your actual notebook results -->
                     <div class="metric-chip">
                         <span class="metric-label">F1 Score</span>
-                        <span class="metric-value">—</span>
+                        <span class="metric-value">0.62</span>
                     </div>
                     <div class="metric-chip">
                         <span class="metric-label">AUC-ROC</span>
-                        <span class="metric-value">—</span>
+                        <span class="metric-value">0.86</span>
                     </div>
                     <div class="metric-chip">
-                        <span class="metric-label">Accuracy</span>
-                        <span class="metric-value">—</span>
+                        <span class="metric-label">Models</span>
+                        <span class="metric-value">3</span>
                     </div>
                 </div>
                 <div class="proj-tech">
@@ -165,6 +170,7 @@
                     <span>Random Forest</span>
                     <span>SHAP</span>
                     <span>Scikit-Learn</span>
+                    <span>SMOTE</span>
                 </div>
                 <a href="https://github.com/Juanhv24/Beta-Bank" target="_blank" class="proj-link">View Case Study →</a>
             </div>
