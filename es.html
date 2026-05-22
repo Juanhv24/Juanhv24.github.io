@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Hernandez | Científico de Datos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .lang-toggle {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            text-decoration: none;
+            border: 1.5px solid var(--border-color);
+            border-radius: 6px;
+            padding: 0.3rem 0.7rem;
+            margin-left: 0.75rem;
+            transition: all 0.2s ease;
+        }
+        .lang-toggle:hover {
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════ NAVEGACIÓN -->
+<nav id="navbar">
+    <div class="logo">JH.DS</div>
+    <ul class="nav-links">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#resume">Currículum</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#contact">Contacto</a></li>
+    </ul>
+    <div class="theme-switch-wrapper">
+        <button id="theme-toggle" aria-label="Cambiar modo oscuro">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+        </button>
+        <a href="en.html" class="lang-toggle" onclick="localStorage.setItem('lang','en')">EN</a>
+    </div>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════════════ HERO -->
+<section id="home" class="hero">
+    <div class="hero-text">
+        <p class="intro-text">Hola, soy</p>
+        <h1>Juan Daniel<br>Hernandez Vargas</h1>
+        <p class="hero-role">Científico de Datos & Candidato a Especialización</p>
+        <p class="tagline">Modelos estadísticos avanzados y soluciones basadas en datos para los sectores Bancario y Fintech.</p>
+        <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Contáctame</a>
+            <a href="#projects" class="btn btn-secondary">Ver mi trabajo</a>
+        </div>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/juan-hernandez-vargas/" target="_blank" aria-label="LinkedIn">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="22" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/Juanhv24" target="_blank" aria-label="GitHub">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="22" alt="GitHub">
+            </a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <div class="hero-image-ring">
+            <img src="images/profile.png" alt="Juan Daniel Hernandez Vargas">
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════ SOBRE MÍ -->
+<section id="about" class="section section-alt">
+    <div class="section-inner">
+        <div class="section-header">
+            <span class="section-label">01 — QUIÉN SOY</span>
+            <h2>Sobre mí</h2>
+        </div>
+        <div class="about-layout">
+            <div class="about-image">
+                <img src="images/profile.png" alt="Juan Hernandez">
+            </div>
+            <div class="about-text">
+                <h3>Mi trayectoria</h3>
+                <p>Soy <strong>Científico de Datos</strong> en proceso de completar una especialización profesional en <strong>Analítica Estadística</strong>. Mi formación en Biología me proporcionó una sólida base investigativa, que ahora aplico a las complejas arquitecturas de datos del mundo financiero.</p>
+                <p>Me enfoco en conectar los datos brutos con la toma de decisiones estratégicas, específicamente en el ámbito del <strong>Análisis de Riesgo</strong> para los sectores Bancario y Fintech. Me especializo en desarrollar modelos explicables que revelan el "por qué" detrás de las tendencias conductuales y financieras.</p>
+                <p>Más allá de mis actividades técnicas, soy un solucionador de problemas apasionado que disfruta analizar patrones de datos para mitigar riesgos y optimizar el ROI en entornos de alta exigencia.</p>
+            </div>
+        </div>
+        <div class="about-grid">
+            <div class="about-item">
+                <div class="about-icon">Σ</div>
+                <div>
+                    <h4>Análisis Estadístico</h4>
+                    <p>Especializado en probabilidad, regresión y pruebas de hipótesis.</p>
+                </div>
+            </div>
+            <div class="about-item">
+                <div class="about-icon">🤖</div>
+                <div>
+                    <h4>Machine Learning</h4>
+                    <p>Modelos predictivos enfocados en Churn y Analítica de Riesgo.</p>
+                </div>
+            </div>
+            <div class="about-item">
+                <div class="about-icon">🏛️</div>
+                <div>
+                    <h4>Fintech & Banca</h4>
+                    <p>Soluciones basadas en datos específicamente para el sector financiero.</p>
+                </div>
+            </div>
+            <div class="about-item">
+                <div class="about-icon">📊</div>
+                <div>
+                    <h4>IA Explicable</h4>
+                    <p>Decodificando modelos complejos con SHAP para la transparencia del negocio.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════ CURRÍCULUM -->
+<section id="resume" class="section">
+    <div class="section-inner">
+        <div class="section-header">
+            <span class="section-label">02 — EXPERIENCIA</span>
+            <h2>Mi Currículum</h2>
+        </div>
+        <div class="card resume-card">
+            <h3>Mi Hoja de Vida Profesional</h3>
+            <p>Científico de datos especializado en Analítica Estadística y Gestión de Riesgo para los sectores Bancario y Fintech.</p>
+            <div class="resume-buttons">
+                <a href="cvs/Juan_Hernandez_CV_ES.pdf" download class="btn btn-primary btn-large">
+                    Descargar Hoja de Vida <span>📩</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ PROYECTOS -->
+<section id="projects" class="section section-alt">
+    <div class="section-inner">
+        <div class="section-header">
+            <span class="section-label">03 — PORTAFOLIO</span>
+            <h2>Proyectos Destacados</h2>
+            <p class="section-subtitle">Arrastra o desliza para explorar →</p>
+        </div>
+
+        <div class="projects-scroll">
+
+            <!-- PROYECTO 1: Beta Bank — Predicción de Churn -->
+            <div class="proj-card">
+                <img src="images/beta_model_comparison.png" alt="Comparación de Modelos" class="proj-img">
+                <div class="proj-top">
+                    <span class="proj-domain">Fintech · Analítica de Riesgo</span>
+                    <h3>Predicción de Churn & IA Explicable</h3>
+                    <p class="proj-company">Beta Bank</p>
+                </div>
+                <div class="proj-impact">
+                    <strong>Impacto de Negocio</strong>
+                    <p>Identificación de segmentos de alto riesgo — clientes mayores e inactivos en Alemania — permitiendo campañas de retención dirigidas. Random Forest + SMOTE logró el mejor equilibrio entre precisión y recall.</p>
+                </div>
+                <div class="proj-metrics">
+                    <div class="metric-chip">
+                        <span class="metric-label">F1 Score</span>
+                        <span class="metric-value">0.62</span>
+                    </div>
+                    <div class="metric-chip">
+                        <span class="metric-label">AUC-ROC</span>
+                        <span class="metric-value">0.86</span>
+                    </div>
+                    <div class="metric-chip">
+                        <span class="metric-label">Modelos</span>
+                        <span class="metric-value">3</span>
+                    </div>
+                </div>
+                <div class="proj-tech">
+                    <span>Python</span>
+                    <span>Random Forest</span>
+                    <span>SHAP</span>
+                    <span>Scikit-Learn</span>
+                    <span>SMOTE</span>
+                </div>
+                <a href="https://github.com/Juanhv24/Beta-Bank" target="_blank" class="proj-link">Ver Caso de Estudio →</a>
+            </div>
+
+            <!-- PROYECTO 2: EDA Seguros SOAT Colombia -->
+            <div class="proj-card proj-card--soon">
+                <div class="proj-top">
+                    <span class="proj-domain proj-domain--co">Insurtech · Colombia</span>
+                    <h3>Siniestros de Seguros Vehiculares — EDA</h3>
+                    <p class="proj-company">Datos SOAT — Fasecolda</p>
+                </div>
+                <div class="proj-impact">
+                    <strong>Objetivo</strong>
+                    <p>Análisis exploratorio de los siniestros del seguro obligatorio vehicular (SOAT) en Colombia — frecuencia de accidentes, severidad de reclamaciones y patrones regionales por departamento.</p>
+                </div>
+                <div class="proj-status">
+                    <span class="status-badge">En Desarrollo</span>
+                </div>
+                <div class="proj-tech">
+                    <span>Python</span>
+                    <span>Pandas</span>
+                    <span>Matplotlib</span>
+                </div>
+            </div>
+
+            <!-- PROYECTO 3: Inclusión Financiera Colombia -->
+            <div class="proj-card proj-card--soon">
+                <div class="proj-top">
+                    <span class="proj-domain proj-domain--co">Fintech · Colombia</span>
+                    <h3>Análisis de Brechas de Inclusión Financiera</h3>
+                    <p class="proj-company">Banca de las Oportunidades</p>
+                </div>
+                <div class="proj-impact">
+                    <strong>Objetivo</strong>
+                    <p>Pruebas estadísticas sobre los datos de inclusión financiera de Colombia — evaluando si la ubicación rural y el nivel de ingresos son predictores significativos del acceso al sistema bancario.</p>
+                </div>
+                <div class="proj-status">
+                    <span class="status-badge status-badge--upcoming">Próximamente — Fase 2</span>
+                </div>
+                <div class="proj-tech">
+                    <span>Python</span>
+                    <span>SciPy</span>
+                    <span>Pruebas de Hipótesis</span>
+                </div>
+            </div>
+
+            <!-- PROYECTO 4: Riesgo Crediticio PYMES Colombia -->
+            <div class="proj-card proj-card--soon">
+                <div class="proj-top">
+                    <span class="proj-domain proj-domain--co">Fintech · Colombia</span>
+                    <h3>Riesgo Crediticio PYMES — Economía Informal</h3>
+                    <p class="proj-company">DANE — Encuesta de Micronegocios</p>
+                </div>
+                <div class="proj-impact">
+                    <strong>Objetivo</strong>
+                    <p>Modelo de clasificación para predecir qué negocios informales colombianos tienen mayor probabilidad de acceder a crédito formal — directamente relevante para el crédito fintech y la inclusión financiera.</p>
+                </div>
+                <div class="proj-status">
+                    <span class="status-badge status-badge--upcoming">Próximamente — Fase 3</span>
+                </div>
+                <div class="proj-tech">
+                    <span>Python</span>
+                    <span>XGBoost</span>
+                    <span>Scikit-Learn</span>
+                    <span>SHAP</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="projects-footer">
+            <p>¿Quieres ver todo lo que he construido?</p>
+            <a href="https://github.com/Juanhv24" target="_blank" class="btn btn-secondary">Todos los proyectos en GitHub →</a>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════ HABILIDADES -->
+<section id="skills" class="section">
+    <div class="section-inner">
+        <div class="section-header">
+            <span class="section-label">04 — CAPACIDADES</span>
+            <h2>Habilidades Técnicas</h2>
+        </div>
+        <div class="skills-legend">
+            <span><span class="dot dot-green"></span> Avanzado</span>
+            <span><span class="dot dot-blue"></span> Intermedio</span>
+        </div>
+        <div class="skills-grid">
+            <div class="card skills-card">
+                <div class="skills-card-header">
+                    <div class="skills-icon">💻</div>
+                    <h3>Tecnologías & Lenguajes</h3>
+                </div>
+                <div class="skill-pills">
+                    <span class="skill-pill proficient">Python</span>
+                    <span class="skill-pill proficient">SQL (PostgreSQL)</span>
+                    <span class="skill-pill intermediate">R Studio</span>
+                    <span class="skill-pill proficient">Excel Avanzado</span>
+                    <span class="skill-pill proficient">Pandas / NumPy</span>
+                </div>
+            </div>
+            <div class="card skills-card">
+                <div class="skills-card-header">
+                    <div class="skills-icon">🤖</div>
+                    <h3>Ciencia de Datos & ML</h3>
+                </div>
+                <div class="skill-pills">
+                    <span class="skill-pill proficient">Scikit-Learn</span>
+                    <span class="skill-pill proficient">Machine Learning</span>
+                    <span class="skill-pill proficient">Predicción de Churn</span>
+                    <span class="skill-pill intermediate">XGBoost / Random Forest</span>
+                    <span class="skill-pill proficient">SHAP (IA Explicable)</span>
+                </div>
+            </div>
+            <div class="card skills-card">
+                <div class="skills-card-header">
+                    <div class="skills-icon">📊</div>
+                    <h3>Analítica Estadística</h3>
+                </div>
+                <div class="skill-pills">
+                    <span class="skill-pill proficient">Pruebas de Hipótesis</span>
+                    <span class="skill-pill proficient">Distribuciones de Probabilidad</span>
+                    <span class="skill-pill proficient">Regresión Lineal & Logística</span>
+                    <span class="skill-pill intermediate">Pronóstico de Series de Tiempo</span>
+                    <span class="skill-pill proficient">Análisis Multivariado</span>
+                </div>
+            </div>
+            <div class="card skills-card">
+                <div class="skills-card-header">
+                    <div class="skills-icon">🏛️</div>
+                    <h3>BI & Herramientas de Riesgo</h3>
+                </div>
+                <div class="skill-pills">
+                    <span class="skill-pill proficient">Power BI</span>
+                    <span class="skill-pill proficient">Tableau</span>
+                    <span class="skill-pill proficient">Análisis de Riesgo</span>
+                    <span class="skill-pill proficient">Visualización de Datos</span>
+                    <span class="skill-pill intermediate">GitHub / Git</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ CONTACTO -->
+<section id="contact" class="section section-alt">
+    <div class="section-inner">
+        <div class="section-header">
+            <span class="section-label">05 — HABLEMOS</span>
+            <h2>Contáctame</h2>
+        </div>
+        <div class="contact-layout">
+            <div class="contact-text">
+                <h3>Construyamos algo basado en datos juntos.</h3>
+                <p>Actualmente estoy abierto a nuevas oportunidades en <strong>Ciencia de Datos</strong> y <strong>Análisis de Riesgo</strong> dentro de los sectores Bancario y Fintech. Ya sea que tengas una consulta específica o simplemente quieras conectar, con gusto te escucho.</p>
+            </div>
+            <div class="contact-cards">
+                <a href="mailto:juandanihv@gmail.com" class="contact-card-link">
+                    <div class="contact-icon-box">📧</div>
+                    <div>
+                        <span class="contact-title">Escríbeme</span>
+                        <span class="contact-sub">juandanihv@gmail.com</span>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/juan-hernandez-vargas/" target="_blank" class="contact-card-link">
+                    <div class="contact-icon-box">🔗</div>
+                    <div>
+                        <span class="contact-title">LinkedIn</span>
+                        <span class="contact-sub">Red Profesional</span>
+                    </div>
+                </a>
+                <a href="https://github.com/Juanhv24" target="_blank" class="contact-card-link">
+                    <div class="contact-icon-box">💻</div>
+                    <div>
+                        <span class="contact-title">GitHub</span>
+                        <span class="contact-sub">Portafolio de Proyectos</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════ FOOTER -->
+<footer>
+    <p>&copy; 2026 Juan Hernandez. Enfocado en Analítica & Riesgo.</p>
+</footer>
+
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+</script>
+</body>
+</html>
