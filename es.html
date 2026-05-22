@@ -45,6 +45,7 @@
             <span class="icon-moon">🌙</span>
         </button>
         <a href="index.html" class="lang-toggle" onclick="localStorage.removeItem('lang')">🌐 EN</a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú">☰</button>
     </div>
 </nav>
 
@@ -378,6 +379,7 @@
 </footer>
 
 <script>
+    // Theme
     const themeToggle = document.getElementById('theme-toggle');
     if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-mode');
@@ -385,6 +387,21 @@
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        hamburger.textContent = open ? '✕' : '☰';
+        hamburger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            hamburger.textContent = '☰';
+        });
     });
 </script>
 </body>
