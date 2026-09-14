@@ -1,0 +1,20 @@
+# Claude Code — local only, never pushed
+CLAUDE.md
+.claude/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+
+# Jekyll build output (GitHub Pages builds server-side)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Local env / secrets
+.env
+.env.local

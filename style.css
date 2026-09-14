@@ -627,6 +627,16 @@ body.dark-mode .icon-moon { display: none; }
     display: block;
 }
 
+/* For diagrams exported on a white canvas rather than a dark chart background */
+.proj-img--light {
+    background: #ffffff;
+}
+
+/* Take the edge off a full-white image in dark mode */
+body.dark-mode .proj-img--light {
+    filter: brightness(0.9);
+}
+
 .proj-link {
     display: inline-block;
     margin-top: 0.5rem;
