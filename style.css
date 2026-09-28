@@ -653,6 +653,13 @@ body.dark-mode .proj-img--light {
     border-bottom-color: var(--accent-blue);
 }
 
+/* Card with more than one link (e.g., live dashboard + repository) */
+.proj-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 1.4rem;
+}
+
 /* "See all" footer below carousel */
 .projects-footer {
     display: flex;
