@@ -169,7 +169,9 @@
 
             <!-- PROJECT 1: Beta Bank — Churn Prediction -->
             <div class="proj-card">
-                <img src="images/beta_model_comparison.png" alt="Model Performance Chart" loading="lazy" decoding="async" class="proj-img">
+                <button type="button" class="proj-zoom" data-full="images/beta_model_comparison_en.png" aria-label="Enlarge: Beta Bank model comparison">
+                    <img src="images/cards/beta_bank_en.png" width="1080" height="555" alt="Test-set F1: Random Forest 0.618, decision tree 0.570 and logistic regression 0.513, against a 0.59 target" loading="lazy" decoding="async" class="proj-img">
+                </button>
                 <div class="proj-top">
                     <span class="proj-domain">Fintech · Risk Analytics</span>
                     <h3>Customer Churn Prediction & Explainable AI</h3>
@@ -205,7 +207,9 @@
 
             <!-- PROJECT 2: Credit Origination Model -->
             <div class="proj-card">
-                <img src="images/credit_origination_model.png" alt="Credit Model Performance" loading="lazy" decoding="async" class="proj-img">
+                <button type="button" class="proj-zoom" data-full="images/credit_origination_model_en.png" aria-label="Enlarge: credit model results">
+                    <img src="images/cards/credit_en.png" width="1080" height="555" alt="Out-of-time GINI: 25.34% with gender, 23.38% gender-blind and close to 0% for both external vendors" loading="lazy" decoding="async" class="proj-img">
+                </button>
                 <div class="proj-top">
                     <span class="proj-domain">Fintech · Credit Risk</span>
                     <h3>Credit Origination Model & Vendor Benchmarking</h3>
@@ -241,7 +245,9 @@
 
             <!-- PROJECT 3: Job Tracker — Extension + Serverless Backend -->
             <div class="proj-card">
-                <img src="images/job_tracker_architecture_en.png" alt="Job Tracker System Architecture" loading="lazy" decoding="async" class="proj-img proj-img--light">
+                <button type="button" class="proj-zoom" data-full="images/job_tracker_architecture_en.png" aria-label="Enlarge: Job Tracker architecture">
+                    <img src="images/cards/job_tracker_en.png" width="1080" height="555" alt="System flow: Chrome extension, Apps Script backend with Claude, Google Sheet, Google Drive and Gmail" loading="lazy" decoding="async" class="proj-img">
+                </button>
                 <div class="proj-top">
                     <span class="proj-domain">Automation · LLM Engineering</span>
                     <h3>Job Application Tracker — Extension & Serverless Backend</h3>
@@ -277,7 +283,9 @@
 
             <!-- PROJECT 4: NYC Taxi — Operations & Fare Integrity -->
             <div class="proj-card">
-                <img src="images/nyc_taxi_dashboard.png" alt="NYC taxi demand dashboard" loading="lazy" decoding="async" class="proj-img">
+                <button type="button" class="proj-zoom" data-full="images/nyc_taxi_dashboard.jpg" aria-label="Enlarge: NYC taxi dashboard">
+                    <img src="images/cards/nyc_taxi_en.png" width="1080" height="555" alt="Heat map of average New York yellow-taxi trips by weekday and hour" loading="lazy" decoding="async" class="proj-img">
+                </button>
                 <div class="proj-top">
                     <span class="proj-domain">Mobility · Data Quality</span>
                     <h3>Operations &amp; Fare Integrity — NYC Taxis</h3>
@@ -494,6 +502,12 @@
     </div>
 </section>
 
+<!-- Lightbox for project images -->
+<dialog class="lightbox" id="lightbox" aria-label="Enlarged image">
+    <button type="button" class="lightbox-close" aria-label="Close">✕</button>
+    <img alt="">
+</dialog>
+
 <!-- ══════════════════════════════════════════════════════════════ FOOTER -->
 <footer>
     <p>&copy; 2026 Juan Hernandez. Data Science & Statistical Analytics.</p>
@@ -556,6 +570,7 @@
         carousel.addEventListener('click', (e) => {
             if (moved) {
                 e.preventDefault();
+                e.stopPropagation();
                 moved = false;
             }
         }, true);
@@ -565,6 +580,26 @@
         carousel.addEventListener('scroll', updateEdge, { passive: true });
         window.addEventListener('resize', updateEdge);
         updateEdge();
+    }
+    // Project image lightbox: a click on a card image opens its detailed version
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox ? lightbox.querySelector('img') : null;
+    document.querySelectorAll('.proj-zoom').forEach((button) => {
+        button.addEventListener('click', () => {
+            const full = button.dataset.full;
+            if (!lightbox || typeof lightbox.showModal !== 'function') {
+                window.open(full, '_blank', 'noopener');
+                return;
+            }
+            lightboxImg.src = full;
+            lightboxImg.alt = button.querySelector('img').alt;
+            lightbox.showModal();
+        });
+    });
+    if (lightbox) {
+        // Any click inside the open viewer (image, backdrop or close button) closes it
+        lightbox.addEventListener('click', () => lightbox.close());
+        lightbox.addEventListener('close', () => lightboxImg.removeAttribute('src'));
     }
 </script>
 </body>

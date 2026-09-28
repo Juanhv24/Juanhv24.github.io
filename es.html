@@ -169,7 +169,9 @@
 
             <!-- PROYECTO 1: Beta Bank — Predicción de Churn -->
             <div class="proj-card">
-                <img src="images/beta_model_comparison.png" alt="Comparación de Modelos" loading="lazy" decoding="async" class="proj-img">
+                <button type="button" class="proj-zoom" data-full="images/beta_model_comparison_es.png" aria-label="Ampliar: comparación de modelos de Beta Bank">
+                    <img src="images/cards/beta_bank_es.png" width="1080" height="555" alt="F1 en el conjunto de prueba: Random Forest 0.618, árbol de decisión 0.570 y regresión logística 0.513, frente a una meta de 0.59" loading="lazy" decoding="async" class="proj-img">
+                </button>
                 <div class="proj-top">
                     <span class="proj-domain">Fintech · Analítica de Riesgo</span>
                     <h3>Predicción de Churn & IA Explicable</h3>
@@ -205,7 +207,9 @@
 
             <!-- PROYECTO 2: Modelo de Originación Crediticia -->
             <div class="proj-card">
-                <img src="images/credit_origination_model.png" alt="Rendimiento del Modelo Crediticio" loading="lazy" decoding="async" class="proj-img">
+                <button type="button" class="proj-zoom" data-full="images/credit_origination_model_es.png" aria-label="Ampliar: resultados del modelo crediticio">
+                    <img src="images/cards/credit_es.png" width="1080" height="555" alt="GINI fuera de tiempo: 25.34% con género, 23.38% sin género y cerca de 0% para los dos proveedores externos" loading="lazy" decoding="async" class="proj-img">
+                </button>
                 <div class="proj-top">
                     <span class="proj-domain">Fintech · Riesgo Crediticio</span>
                     <h3>Modelo de Originación Crediticia & Benchmarking de Proveedores</h3>
@@ -241,7 +245,9 @@
 
             <!-- PROYECTO 3: Job Tracker — Extensión + Backend Serverless -->
             <div class="proj-card">
-                <img src="images/job_tracker_arquitectura.png" alt="Arquitectura del sistema Job Tracker" loading="lazy" decoding="async" class="proj-img proj-img--light">
+                <button type="button" class="proj-zoom" data-full="images/job_tracker_arquitectura.png" aria-label="Ampliar: arquitectura del Job Tracker">
+                    <img src="images/cards/job_tracker_es.png" width="1080" height="555" alt="Flujo del sistema: extensión de Chrome, backend en Apps Script con Claude, Google Sheet, Google Drive y Gmail" loading="lazy" decoding="async" class="proj-img">
+                </button>
                 <div class="proj-top">
                     <span class="proj-domain">Automatización · Ingeniería LLM</span>
                     <h3>Seguimiento de Postulaciones — Extensión y Backend Serverless</h3>
@@ -277,7 +283,9 @@
 
             <!-- PROYECTO 4: NYC Taxi — Operación e Integridad Tarifaria -->
             <div class="proj-card">
-                <img src="images/nyc_taxi_dashboard.png" alt="Tablero de demanda de taxis de Nueva York" loading="lazy" decoding="async" class="proj-img">
+                <button type="button" class="proj-zoom" data-full="images/nyc_taxi_dashboard.jpg" aria-label="Ampliar: tablero de taxis de Nueva York">
+                    <img src="images/cards/nyc_taxi_es.png" width="1080" height="555" alt="Mapa de calor de los viajes promedio por día de la semana y hora en los taxis amarillos de Nueva York" loading="lazy" decoding="async" class="proj-img">
+                </button>
                 <div class="proj-top">
                     <span class="proj-domain">Movilidad · Calidad de Datos</span>
                     <h3>Operación e Integridad Tarifaria — Taxis de NYC</h3>
@@ -494,6 +502,12 @@
     </div>
 </section>
 
+<!-- Lightbox for project images -->
+<dialog class="lightbox" id="lightbox" aria-label="Imagen ampliada">
+    <button type="button" class="lightbox-close" aria-label="Cerrar">✕</button>
+    <img alt="">
+</dialog>
+
 <!-- ══════════════════════════════════════════════════════════════ FOOTER -->
 <footer>
     <p>&copy; 2026 Juan Hernandez. Ciencia de Datos & Analítica Estadística.</p>
@@ -556,6 +570,7 @@
         carousel.addEventListener('click', (e) => {
             if (moved) {
                 e.preventDefault();
+                e.stopPropagation();
                 moved = false;
             }
         }, true);
@@ -565,6 +580,26 @@
         carousel.addEventListener('scroll', updateEdge, { passive: true });
         window.addEventListener('resize', updateEdge);
         updateEdge();
+    }
+    // Project image lightbox: a click on a card image opens its detailed version
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox ? lightbox.querySelector('img') : null;
+    document.querySelectorAll('.proj-zoom').forEach((button) => {
+        button.addEventListener('click', () => {
+            const full = button.dataset.full;
+            if (!lightbox || typeof lightbox.showModal !== 'function') {
+                window.open(full, '_blank', 'noopener');
+                return;
+            }
+            lightboxImg.src = full;
+            lightboxImg.alt = button.querySelector('img').alt;
+            lightbox.showModal();
+        });
+    });
+    if (lightbox) {
+        // Any click inside the open viewer (image, backdrop or close button) closes it
+        lightbox.addEventListener('click', () => lightbox.close());
+        lightbox.addEventListener('close', () => lightboxImg.removeAttribute('src'));
     }
 </script>
 </body>
