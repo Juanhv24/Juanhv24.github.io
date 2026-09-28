@@ -348,6 +348,7 @@ body.dark-mode .icon-moon { display: none; }
 
 .about-image img {
     width: 100%;
+    height: auto;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
@@ -460,6 +461,24 @@ body.dark-mode .icon-moon { display: none; }
 }
 
 .projects-scroll:active {
+    cursor: grabbing;
+}
+
+/* Right-edge fade signals that more cards follow; removed at the end of the row */
+.projects-scroll {
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 72px), transparent);
+            mask-image: linear-gradient(to right, #000 calc(100% - 72px), transparent);
+}
+
+.projects-scroll.at-end {
+    -webkit-mask-image: none;
+            mask-image: none;
+}
+
+/* While dragging with the mouse, snapping and text selection are paused */
+.projects-scroll.dragging {
+    scroll-snap-type: none;
+    user-select: none;
     cursor: grabbing;
 }
 
@@ -603,7 +622,6 @@ body.dark-mode .icon-moon { display: none; }
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
-    margin-top: auto;
 }
 
 .proj-tech span {
@@ -658,6 +676,12 @@ body.dark-mode .proj-img--light {
     display: flex;
     flex-wrap: wrap;
     gap: 0.2rem 1.4rem;
+}
+
+/* Content flows from the top; only the links are anchored to the bottom so they line up across cards */
+.proj-card > .proj-link,
+.proj-links {
+    margin-top: auto;
 }
 
 /* "See all" footer below carousel */
