@@ -167,121 +167,7 @@
 
         <div class="projects-scroll">
 
-            <!-- PROYECTO 1: Beta Bank — Predicción de Churn -->
-            <div class="proj-card">
-                <button type="button" class="proj-zoom" data-full="images/beta_model_comparison_es.png" aria-label="Ampliar: comparación de modelos de Beta Bank">
-                    <img src="images/cards/beta_bank_es.png" width="1080" height="555" alt="F1 en el conjunto de prueba: Random Forest 0.618, árbol de decisión 0.570 y regresión logística 0.513, frente a una meta de 0.59" loading="lazy" decoding="async" class="proj-img">
-                </button>
-                <div class="proj-top">
-                    <span class="proj-domain">Fintech · Analítica de Riesgo</span>
-                    <h3>Predicción de Churn & IA Explicable</h3>
-                    <p class="proj-company">Beta Bank</p>
-                </div>
-                <div class="proj-impact">
-                    <strong>Impacto de Negocio</strong>
-                    <p>Identificación de segmentos de alto riesgo — clientes mayores e inactivos en Alemania — permitiendo campañas de retención dirigidas. Random Forest + SMOTE logró el mejor equilibrio entre precisión y recall.</p>
-                </div>
-                <div class="proj-metrics">
-                    <div class="metric-chip">
-                        <span class="metric-label">F1 Score</span>
-                        <span class="metric-value">0.62</span>
-                    </div>
-                    <div class="metric-chip">
-                        <span class="metric-label">AUC-ROC</span>
-                        <span class="metric-value">0.86</span>
-                    </div>
-                    <div class="metric-chip">
-                        <span class="metric-label">Modelos</span>
-                        <span class="metric-value">3</span>
-                    </div>
-                </div>
-                <div class="proj-tech">
-                    <span>Python</span>
-                    <span>Random Forest</span>
-                    <span>SHAP</span>
-                    <span>Scikit-Learn</span>
-                    <span>SMOTE</span>
-                </div>
-                <a href="https://github.com/Juanhv24/Beta-Bank" target="_blank" rel="noopener noreferrer" class="proj-link">Ver Caso de Estudio →</a>
-            </div>
-
-            <!-- PROYECTO 2: Modelo de Originación Crediticia -->
-            <div class="proj-card">
-                <button type="button" class="proj-zoom" data-full="images/credit_origination_model_es.png" aria-label="Ampliar: resultados del modelo crediticio">
-                    <img src="images/cards/credit_es.png" width="1080" height="555" alt="GINI fuera de tiempo: 25.34% con género, 23.38% sin género y cerca de 0% para los dos proveedores externos" loading="lazy" decoding="async" class="proj-img">
-                </button>
-                <div class="proj-top">
-                    <span class="proj-domain">Fintech · Riesgo Crediticio</span>
-                    <h3>Modelo de Originación Crediticia & Benchmarking de Proveedores</h3>
-                    <p class="proj-company">Prueba técnica — entidad financiera</p>
-                </div>
-                <div class="proj-impact">
-                    <strong>Impacto de Negocio</strong>
-                    <p>Pipeline completo de scoring crediticio con validación OOT, auditoría SHAP y análisis de IA ética. Comparación de modelos con y sin Género — 1.96 pp de diferencia en GINI para un sistema más justo. Ningún proveedor externo superó el modelo interno.</p>
-                </div>
-                <div class="proj-metrics">
-                    <div class="metric-chip">
-                        <span class="metric-label">AUC-ROC</span>
-                        <span class="metric-value">0.627</span>
-                    </div>
-                    <div class="metric-chip">
-                        <span class="metric-label">GINI</span>
-                        <span class="metric-value">25.3%</span>
-                    </div>
-                    <div class="metric-chip">
-                        <span class="metric-label">Validación</span>
-                        <span class="metric-value">OOT</span>
-                    </div>
-                </div>
-                <div class="proj-tech">
-                    <span>LightGBM</span>
-                    <span>Optuna</span>
-                    <span>SHAP</span>
-                    <span>Scikit-Learn</span>
-                    <span>SciPy</span>
-                </div>
-                <a href="https://github.com/Juanhv24/credit-origination-model" target="_blank" rel="noopener noreferrer" class="proj-link">Ver Caso de Estudio →</a>
-            </div>
-
-            <!-- PROYECTO 3: Job Tracker — Extensión + Backend Serverless -->
-            <div class="proj-card">
-                <button type="button" class="proj-zoom" data-full="images/job_tracker_arquitectura.png" aria-label="Ampliar: arquitectura del Job Tracker">
-                    <img src="images/cards/job_tracker_es.png" width="1080" height="555" alt="Flujo del sistema: extensión de Chrome, backend en Apps Script con Claude, Google Sheet, Google Drive y Gmail" loading="lazy" decoding="async" class="proj-img">
-                </button>
-                <div class="proj-top">
-                    <span class="proj-domain">Automatización · Ingeniería LLM</span>
-                    <h3>Seguimiento de Postulaciones — Extensión y Backend Serverless</h3>
-                    <p class="proj-company">Proyecto Personal</p>
-                </div>
-                <div class="proj-impact">
-                    <strong>Qué hace</strong>
-                    <p>Un clic registra una vacante en una Google Sheet: una extensión de Chrome extrae la oferta, un backend en Apps Script redacta el mensaje de contacto y una carta de presentación en PDF con Claude, y una rutina programada sobre Gmail avanza sola la etapa de cada postulación. Ninguna API key viaja dentro de la extensión — todas las credenciales viven en el servidor.</p>
-                </div>
-                <div class="proj-metrics">
-                    <div class="metric-chip">
-                        <span class="metric-label">Portales</span>
-                        <span class="metric-value">5</span>
-                    </div>
-                    <div class="metric-chip">
-                        <span class="metric-label">Auto-Sync</span>
-                        <span class="metric-value">6h</span>
-                    </div>
-                    <div class="metric-chip">
-                        <span class="metric-label">Etapas</span>
-                        <span class="metric-value">7</span>
-                    </div>
-                </div>
-                <div class="proj-tech">
-                    <span>JavaScript</span>
-                    <span>Extensión Chrome (MV3)</span>
-                    <span>Google Apps Script</span>
-                    <span>Anthropic API</span>
-                    <span>Gmail API</span>
-                </div>
-                <a href="https://github.com/Juanhv24/job-tracker" target="_blank" rel="noopener noreferrer" class="proj-link">Ver Caso de Estudio →</a>
-            </div>
-
-            <!-- PROYECTO 4: NYC Taxi — Operación e Integridad Tarifaria -->
+            <!-- PROYECTO 1: NYC Taxi — Operación e Integridad Tarifaria -->
             <div class="proj-card">
                 <button type="button" class="proj-zoom" data-full="images/nyc_taxi_dashboard.jpg" aria-label="Ampliar: tablero de taxis de Nueva York">
                     <img src="images/cards/nyc_taxi_es.png" width="1080" height="555" alt="Mapa de calor de los viajes promedio por día de la semana y hora en los taxis amarillos de Nueva York" loading="lazy" decoding="async" class="proj-img">
@@ -322,7 +208,7 @@
                 </div>
             </div>
 
-            <!-- PROYECTO 5: TRM — Pronóstico con bandas de riesgo -->
+            <!-- PROYECTO 2: TRM — Pronóstico con bandas de riesgo -->
             <div class="proj-card">
                 <button type="button" class="proj-zoom" data-full="images/trm_tablero.jpg" aria-label="Ampliar: tablero de la TRM">
                     <img src="images/cards/trm_es.png" width="1080" height="555" alt="Pronóstico del promedio mensual de la TRM a 12 meses con bandas de riesgo del 50 %, 80 % y 95 %" loading="lazy" decoding="async" class="proj-img">
@@ -364,68 +250,118 @@
                 </div>
             </div>
 
-            <!-- PROYECTO 6: EDA Seguros SOAT Colombia -->
-            <div class="proj-card proj-card--soon">
+            <!-- PROYECTO 3: Modelo de Originación Crediticia -->
+            <div class="proj-card">
+                <button type="button" class="proj-zoom" data-full="images/credit_origination_model_es.png" aria-label="Ampliar: resultados del modelo crediticio">
+                    <img src="images/cards/credit_es.png" width="1080" height="555" alt="GINI fuera de tiempo: 25.34% con género, 23.38% sin género y cerca de 0% para los dos proveedores externos" loading="lazy" decoding="async" class="proj-img">
+                </button>
                 <div class="proj-top">
-                    <span class="proj-domain proj-domain--co">Insurtech · Colombia</span>
-                    <h3>Siniestros de Seguros Vehiculares — EDA</h3>
-                    <p class="proj-company">Datos SOAT — Fasecolda</p>
+                    <span class="proj-domain">Fintech · Riesgo Crediticio</span>
+                    <h3>Modelo de Originación Crediticia & Benchmarking de Proveedores</h3>
+                    <p class="proj-company">Prueba técnica — entidad financiera</p>
                 </div>
                 <div class="proj-impact">
-                    <strong>Objetivo</strong>
-                    <p>Análisis exploratorio de los siniestros del seguro obligatorio vehicular (SOAT) en Colombia — frecuencia de accidentes, severidad de reclamaciones y patrones regionales por departamento.</p>
+                    <strong>Impacto de Negocio</strong>
+                    <p>Pipeline completo de scoring crediticio con validación OOT, auditoría SHAP y análisis de IA ética. Comparación de modelos con y sin Género — 1.96 pp de diferencia en GINI para un sistema más justo. Ningún proveedor externo superó el modelo interno.</p>
                 </div>
-                <div class="proj-status">
-                    <span class="status-badge">En Desarrollo</span>
-                </div>
-                <div class="proj-tech">
-                    <span>Python</span>
-                    <span>Pandas</span>
-                    <span>Matplotlib</span>
-                </div>
-            </div>
-
-            <!-- PROYECTO 7: Inclusión Financiera Colombia -->
-            <div class="proj-card proj-card--soon">
-                <div class="proj-top">
-                    <span class="proj-domain proj-domain--co">Fintech · Colombia</span>
-                    <h3>Análisis de Brechas de Inclusión Financiera</h3>
-                    <p class="proj-company">Banca de las Oportunidades</p>
-                </div>
-                <div class="proj-impact">
-                    <strong>Objetivo</strong>
-                    <p>Pruebas estadísticas sobre los datos de inclusión financiera de Colombia — evaluando si la ubicación rural y el nivel de ingresos son predictores significativos del acceso al sistema bancario.</p>
-                </div>
-                <div class="proj-status">
-                    <span class="status-badge status-badge--upcoming">Próximamente — Fase 2</span>
+                <div class="proj-metrics">
+                    <div class="metric-chip">
+                        <span class="metric-label">AUC-ROC</span>
+                        <span class="metric-value">0.627</span>
+                    </div>
+                    <div class="metric-chip">
+                        <span class="metric-label">GINI</span>
+                        <span class="metric-value">25.3%</span>
+                    </div>
+                    <div class="metric-chip">
+                        <span class="metric-label">Validación</span>
+                        <span class="metric-value">OOT</span>
+                    </div>
                 </div>
                 <div class="proj-tech">
-                    <span>Python</span>
-                    <span>SciPy</span>
-                    <span>Pruebas de Hipótesis</span>
-                </div>
-            </div>
-
-            <!-- PROYECTO 8: Riesgo Crediticio PYMES Colombia -->
-            <div class="proj-card proj-card--soon">
-                <div class="proj-top">
-                    <span class="proj-domain proj-domain--co">Fintech · Colombia</span>
-                    <h3>Riesgo Crediticio PYMES — Economía Informal</h3>
-                    <p class="proj-company">DANE — Encuesta de Micronegocios</p>
-                </div>
-                <div class="proj-impact">
-                    <strong>Objetivo</strong>
-                    <p>Modelo de clasificación para predecir qué negocios informales colombianos tienen mayor probabilidad de acceder a crédito formal — directamente relevante para el crédito fintech y la inclusión financiera.</p>
-                </div>
-                <div class="proj-status">
-                    <span class="status-badge status-badge--upcoming">Próximamente — Fase 3</span>
-                </div>
-                <div class="proj-tech">
-                    <span>Python</span>
-                    <span>XGBoost</span>
-                    <span>Scikit-Learn</span>
+                    <span>LightGBM</span>
+                    <span>Optuna</span>
                     <span>SHAP</span>
+                    <span>Scikit-Learn</span>
+                    <span>SciPy</span>
                 </div>
+                <a href="https://github.com/Juanhv24/credit-origination-model" target="_blank" rel="noopener noreferrer" class="proj-link">Ver Caso de Estudio →</a>
+            </div>
+
+            <!-- PROYECTO 4: Job Tracker — Extensión + Backend Serverless -->
+            <div class="proj-card">
+                <button type="button" class="proj-zoom" data-full="images/job_tracker_arquitectura.png" aria-label="Ampliar: arquitectura del Job Tracker">
+                    <img src="images/cards/job_tracker_es.png" width="1080" height="555" alt="Flujo del sistema: extensión de Chrome, backend en Apps Script con Claude, Google Sheet, Google Drive y Gmail" loading="lazy" decoding="async" class="proj-img">
+                </button>
+                <div class="proj-top">
+                    <span class="proj-domain">Automatización · Ingeniería LLM</span>
+                    <h3>Seguimiento de Postulaciones — Extensión y Backend Serverless</h3>
+                    <p class="proj-company">Proyecto Personal</p>
+                </div>
+                <div class="proj-impact">
+                    <strong>Qué hace</strong>
+                    <p>Un clic registra una vacante en una Google Sheet: una extensión de Chrome extrae la oferta, un backend en Apps Script redacta el mensaje de contacto y una carta de presentación en PDF con Claude, y una rutina programada sobre Gmail avanza sola la etapa de cada postulación. Ninguna API key viaja dentro de la extensión — todas las credenciales viven en el servidor.</p>
+                </div>
+                <div class="proj-metrics">
+                    <div class="metric-chip">
+                        <span class="metric-label">Portales</span>
+                        <span class="metric-value">5</span>
+                    </div>
+                    <div class="metric-chip">
+                        <span class="metric-label">Auto-Sync</span>
+                        <span class="metric-value">6h</span>
+                    </div>
+                    <div class="metric-chip">
+                        <span class="metric-label">Etapas</span>
+                        <span class="metric-value">7</span>
+                    </div>
+                </div>
+                <div class="proj-tech">
+                    <span>JavaScript</span>
+                    <span>Extensión Chrome (MV3)</span>
+                    <span>Google Apps Script</span>
+                    <span>Anthropic API</span>
+                    <span>Gmail API</span>
+                </div>
+                <a href="https://github.com/Juanhv24/job-tracker" target="_blank" rel="noopener noreferrer" class="proj-link">Ver Caso de Estudio →</a>
+            </div>
+
+            <!-- PROYECTO 5: Beta Bank — Predicción de Churn -->
+            <div class="proj-card">
+                <button type="button" class="proj-zoom" data-full="images/beta_model_comparison_es.png" aria-label="Ampliar: comparación de modelos de Beta Bank">
+                    <img src="images/cards/beta_bank_es.png" width="1080" height="555" alt="F1 en el conjunto de prueba: Random Forest 0.618, árbol de decisión 0.570 y regresión logística 0.513, frente a una meta de 0.59" loading="lazy" decoding="async" class="proj-img">
+                </button>
+                <div class="proj-top">
+                    <span class="proj-domain">Fintech · Analítica de Riesgo</span>
+                    <h3>Predicción de Churn & IA Explicable</h3>
+                    <p class="proj-company">Beta Bank</p>
+                </div>
+                <div class="proj-impact">
+                    <strong>Impacto de Negocio</strong>
+                    <p>Identificación de segmentos de alto riesgo — clientes mayores e inactivos en Alemania — permitiendo campañas de retención dirigidas. Random Forest con sobremuestreo de la clase minoritaria logró el mejor equilibrio entre precisión y recall.</p>
+                </div>
+                <div class="proj-metrics">
+                    <div class="metric-chip">
+                        <span class="metric-label">F1 Score</span>
+                        <span class="metric-value">0.62</span>
+                    </div>
+                    <div class="metric-chip">
+                        <span class="metric-label">AUC-ROC</span>
+                        <span class="metric-value">0.86</span>
+                    </div>
+                    <div class="metric-chip">
+                        <span class="metric-label">Modelos</span>
+                        <span class="metric-value">3</span>
+                    </div>
+                </div>
+                <div class="proj-tech">
+                    <span>Python</span>
+                    <span>Random Forest</span>
+                    <span>SHAP</span>
+                    <span>Scikit-Learn</span>
+                    <span>Sobremuestreo</span>
+                </div>
+                <a href="https://github.com/Juanhv24/Beta-Bank" target="_blank" rel="noopener noreferrer" class="proj-link">Ver Caso de Estudio →</a>
             </div>
 
         </div>

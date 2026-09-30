@@ -11,7 +11,6 @@
     --text-main: #1a1d21;
     --text-muted: #64748b;
     --accent-blue: #0070f3;
-    --accent-co: #f59e0b;      /* amber — Colombia-focused projects */
     --border-color: #e2e8f0;
     --nav-bg: rgba(255, 255, 255, 0.95);
     --nav-height: 72px;
@@ -24,7 +23,6 @@ body.dark-mode {
     --text-main: #f0f0f0;
     --text-muted: #a0a0a0;
     --accent-blue: #3d9afc;
-    --accent-co: #fbbf24;
     --border-color: #2a2a2a;
     --nav-bg: rgba(18, 18, 18, 0.95);
 }
@@ -504,10 +502,6 @@ body.dark-mode .icon-moon { display: none; }
     border-color: var(--accent-blue);
 }
 
-.proj-card--soon {
-    opacity: 0.85;
-}
-
 .proj-top {
     display: flex;
     flex-direction: column;
@@ -526,11 +520,6 @@ body.dark-mode .icon-moon { display: none; }
     padding: 0.3rem 0.75rem;
     border-radius: 50px;
     width: fit-content;
-}
-
-.proj-domain--co {
-    color: var(--accent-co);
-    background: rgba(245, 158, 11, 0.1);
 }
 
 .proj-card h3 {
@@ -591,30 +580,6 @@ body.dark-mode .icon-moon { display: none; }
     font-size: 1.05rem;
     font-weight: 800;
     color: var(--accent-blue);
-}
-
-/* Status badge for upcoming projects */
-.proj-status {
-    flex: 1;
-    display: flex;
-    align-items: flex-end;
-}
-
-.status-badge {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 0.35rem 0.9rem;
-    border-radius: 50px;
-    background: rgba(0, 112, 243, 0.1);
-    color: var(--accent-blue);
-    border: 1px solid rgba(0, 112, 243, 0.2);
-}
-
-.status-badge--upcoming {
-    background: rgba(245, 158, 11, 0.1);
-    color: var(--accent-co);
-    border-color: rgba(245, 158, 11, 0.25);
 }
 
 /* Tech stack tags */
