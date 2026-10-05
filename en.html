@@ -100,7 +100,7 @@
             <div class="about-text">
                 <h3>My Journey</h3>
                 <p>I am a <strong>Data Scientist</strong> currently completing a professional specialization in <strong>Statistical Analytics</strong>. My background in <strong>Biology</strong> gave me a scientific way of working: frame the question well, check the evidence, and justify every decision.</p>
-                <p>I work with data from different domains, from credit risk and customer retention to urban mobility, with one common thread: understand the data before modeling it, choose methods that fit the problem, and build explainable results that can be turned into decisions.</p>
+                <p>I work with data from different domains, from credit risk, fraud detection and customer retention to urban mobility, with one common thread: understand the data before modeling it, choose methods that fit the problem, and build explainable results that can be turned into decisions.</p>
                 <p>Looking ahead, I want to bring that same rigor to <strong>biological databases</strong>, where my scientific training and my statistical toolkit meet.</p>
             </div>
         </div>
@@ -167,7 +167,46 @@
 
         <div class="projects-scroll">
 
-            <!-- PROJECT 1: NYC Taxi — Operations & Fare Integrity -->
+            <!-- PROJECT 1: Transaction fraud detection — SQL, LightGBM & autoencoder -->
+            <div class="proj-card">
+                <button type="button" class="proj-zoom" data-full="images/fraude_resultados_en.png" aria-label="Enlarge: fraud model results">
+                    <img src="images/cards/fraude_en.png" width="1080" height="555" alt="Share of alerts that are fraud: 85.4% in the riskiest 1%, 66.6% in the riskiest 2% and 39.6% in the riskiest 5%, versus 3.4% at random" loading="lazy" decoding="async" class="proj-img">
+                </button>
+                <div class="proj-top">
+                    <span class="proj-domain">Fraud Detection · SQL + ML</span>
+                    <h3>Transaction Fraud Detection — SQL, LightGBM &amp; Autoencoder</h3>
+                    <p class="proj-company">IEEE-CIS (Vesta) — 590,540 transactions</p>
+                </div>
+                <div class="proj-impact">
+                    <strong>Business Impact</strong>
+                    <p>End-to-end project: SQLite builds each card's history with window functions, a LightGBM with chronological validation ranks the alerts, and a PyTorch autoencoder looks for fraud without labels. Reviewing the riskiest 1% of transactions, 85% of alerts are actual fraud.</p>
+                </div>
+                <div class="proj-metrics">
+                    <div class="metric-chip">
+                        <span class="metric-label">PR-AUC</span>
+                        <span class="metric-value">0.50</span>
+                    </div>
+                    <div class="metric-chip">
+                        <span class="metric-label">Top-1% precision</span>
+                        <span class="metric-value">85%</span>
+                    </div>
+                    <div class="metric-chip">
+                        <span class="metric-label">Transactions</span>
+                        <span class="metric-value">590K</span>
+                    </div>
+                </div>
+                <div class="proj-tech">
+                    <span>SQL (SQLite)</span>
+                    <span>Python</span>
+                    <span>LightGBM</span>
+                    <span>Optuna</span>
+                    <span>SHAP</span>
+                    <span>PyTorch</span>
+                </div>
+                <a href="https://github.com/Juanhv24/transaction-fraud-detection" target="_blank" rel="noopener noreferrer" class="proj-link">View Case Study →</a>
+            </div>
+
+            <!-- PROJECT 2: NYC Taxi — Operations & Fare Integrity -->
             <div class="proj-card">
                 <button type="button" class="proj-zoom" data-full="images/nyc_taxi_dashboard.jpg" aria-label="Enlarge: NYC taxi dashboard">
                     <img src="images/cards/nyc_taxi_en.png" width="1080" height="555" alt="Heat map of average New York yellow-taxi trips by weekday and hour" loading="lazy" decoding="async" class="proj-img">
@@ -208,7 +247,7 @@
                 </div>
             </div>
 
-            <!-- PROJECT 2: TRM — Forecast with risk bands -->
+            <!-- PROJECT 3: TRM — Forecast with risk bands -->
             <div class="proj-card">
                 <button type="button" class="proj-zoom" data-full="images/trm_tablero.jpg" aria-label="Enlarge: TRM dashboard">
                     <img src="images/cards/trm_en.png" width="1080" height="555" alt="12-month forecast of the monthly average COP/USD rate with 50%, 80% and 95% risk bands" loading="lazy" decoding="async" class="proj-img">
@@ -250,7 +289,7 @@
                 </div>
             </div>
 
-            <!-- PROJECT 3: Credit Origination Model -->
+            <!-- PROJECT 4: Credit Origination Model -->
             <div class="proj-card">
                 <button type="button" class="proj-zoom" data-full="images/credit_origination_model_en.png" aria-label="Enlarge: credit model results">
                     <img src="images/cards/credit_en.png" width="1080" height="555" alt="Out-of-time GINI: 25.34% with gender, 23.38% gender-blind and close to 0% for both external vendors" loading="lazy" decoding="async" class="proj-img">
@@ -288,7 +327,7 @@
                 <a href="https://github.com/Juanhv24/credit-origination-model" target="_blank" rel="noopener noreferrer" class="proj-link">View Case Study →</a>
             </div>
 
-            <!-- PROJECT 4: Job Tracker — Extension + Serverless Backend -->
+            <!-- PROJECT 5: Job Tracker — Extension + Serverless Backend -->
             <div class="proj-card">
                 <button type="button" class="proj-zoom" data-full="images/job_tracker_architecture_en.png" aria-label="Enlarge: Job Tracker architecture">
                     <img src="images/cards/job_tracker_en.png" width="1080" height="555" alt="System flow: Chrome extension, Apps Script backend with Claude, Google Sheet, Google Drive and Gmail" loading="lazy" decoding="async" class="proj-img">
@@ -326,7 +365,7 @@
                 <a href="https://github.com/Juanhv24/job-tracker" target="_blank" rel="noopener noreferrer" class="proj-link">View Case Study →</a>
             </div>
 
-            <!-- PROJECT 5: Beta Bank — Churn Prediction -->
+            <!-- PROJECT 6: Beta Bank — Churn Prediction -->
             <div class="proj-card">
                 <button type="button" class="proj-zoom" data-full="images/beta_model_comparison_en.png" aria-label="Enlarge: Beta Bank model comparison">
                     <img src="images/cards/beta_bank_en.png" width="1080" height="555" alt="Test-set F1: Random Forest 0.618, decision tree 0.570 and logistic regression 0.513, against a 0.59 target" loading="lazy" decoding="async" class="proj-img">

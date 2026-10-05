@@ -100,7 +100,7 @@
             <div class="about-text">
                 <h3>Mi trayectoria</h3>
                 <p>Soy <strong>Científico de Datos</strong> en proceso de completar una especialización profesional en <strong>Analítica Estadística</strong>. Mi formación en <strong>Biología</strong> me dio una forma de trabajar basada en el método científico: plantear bien la pregunta, revisar la evidencia y justificar cada decisión.</p>
-                <p>Trabajo con datos de distintos dominios, desde el riesgo crediticio y la retención de clientes hasta la movilidad urbana, con un mismo hilo conductor: entender los datos antes de modelarlos, elegir métodos acordes al problema y construir resultados explicables que se puedan convertir en decisiones.</p>
+                <p>Trabajo con datos de distintos dominios, desde el riesgo crediticio, la detección de fraude y la retención de clientes hasta la movilidad urbana, con un mismo hilo conductor: entender los datos antes de modelarlos, elegir métodos acordes al problema y construir resultados explicables que se puedan convertir en decisiones.</p>
                 <p>Hacia adelante, mi interés está en llevar ese mismo rigor a las <strong>bases de datos biológicas</strong>, donde mi formación científica y mis herramientas estadísticas se encuentran.</p>
             </div>
         </div>
@@ -167,7 +167,46 @@
 
         <div class="projects-scroll">
 
-            <!-- PROYECTO 1: NYC Taxi — Operación e Integridad Tarifaria -->
+            <!-- PROYECTO 1: Detección de fraude transaccional — SQL, LightGBM y autoencoder -->
+            <div class="proj-card">
+                <button type="button" class="proj-zoom" data-full="images/fraude_resultados_es.png" aria-label="Ampliar: resultados del modelo de fraude">
+                    <img src="images/cards/fraude_es.png" width="1080" height="555" alt="Porcentaje de alertas que son fraude: 85.4% en el 1% más riesgoso, 66.6% en el 2% y 39.6% en el 5%, frente a 3.4% al azar" loading="lazy" decoding="async" class="proj-img">
+                </button>
+                <div class="proj-top">
+                    <span class="proj-domain">Detección de Fraude · SQL + ML</span>
+                    <h3>Detección de Fraude Transaccional — SQL, LightGBM y Autoencoder</h3>
+                    <p class="proj-company">IEEE-CIS (Vesta) — 590,540 transacciones</p>
+                </div>
+                <div class="proj-impact">
+                    <strong>Impacto de Negocio</strong>
+                    <p>Proyecto integrador: SQLite construye el historial de cada tarjeta con funciones de ventana, un LightGBM con validación cronológica prioriza las alertas y un autoencoder en PyTorch busca fraude sin etiquetas. Revisando el 1% de las transacciones de mayor riesgo, el 85% de las alertas son fraude real.</p>
+                </div>
+                <div class="proj-metrics">
+                    <div class="metric-chip">
+                        <span class="metric-label">PR-AUC</span>
+                        <span class="metric-value">0.50</span>
+                    </div>
+                    <div class="metric-chip">
+                        <span class="metric-label">Precisión top 1%</span>
+                        <span class="metric-value">85%</span>
+                    </div>
+                    <div class="metric-chip">
+                        <span class="metric-label">Transacciones</span>
+                        <span class="metric-value">590K</span>
+                    </div>
+                </div>
+                <div class="proj-tech">
+                    <span>SQL (SQLite)</span>
+                    <span>Python</span>
+                    <span>LightGBM</span>
+                    <span>Optuna</span>
+                    <span>SHAP</span>
+                    <span>PyTorch</span>
+                </div>
+                <a href="https://github.com/Juanhv24/transaction-fraud-detection" target="_blank" rel="noopener noreferrer" class="proj-link">Ver Caso de Estudio →</a>
+            </div>
+
+            <!-- PROYECTO 2: NYC Taxi — Operación e Integridad Tarifaria -->
             <div class="proj-card">
                 <button type="button" class="proj-zoom" data-full="images/nyc_taxi_dashboard.jpg" aria-label="Ampliar: tablero de taxis de Nueva York">
                     <img src="images/cards/nyc_taxi_es.png" width="1080" height="555" alt="Mapa de calor de los viajes promedio por día de la semana y hora en los taxis amarillos de Nueva York" loading="lazy" decoding="async" class="proj-img">
@@ -208,7 +247,7 @@
                 </div>
             </div>
 
-            <!-- PROYECTO 2: TRM — Pronóstico con bandas de riesgo -->
+            <!-- PROYECTO 3: TRM — Pronóstico con bandas de riesgo -->
             <div class="proj-card">
                 <button type="button" class="proj-zoom" data-full="images/trm_tablero.jpg" aria-label="Ampliar: tablero de la TRM">
                     <img src="images/cards/trm_es.png" width="1080" height="555" alt="Pronóstico del promedio mensual de la TRM a 12 meses con bandas de riesgo del 50 %, 80 % y 95 %" loading="lazy" decoding="async" class="proj-img">
@@ -250,7 +289,7 @@
                 </div>
             </div>
 
-            <!-- PROYECTO 3: Modelo de Originación Crediticia -->
+            <!-- PROYECTO 4: Modelo de Originación Crediticia -->
             <div class="proj-card">
                 <button type="button" class="proj-zoom" data-full="images/credit_origination_model_es.png" aria-label="Ampliar: resultados del modelo crediticio">
                     <img src="images/cards/credit_es.png" width="1080" height="555" alt="GINI fuera de tiempo: 25.34% con género, 23.38% sin género y cerca de 0% para los dos proveedores externos" loading="lazy" decoding="async" class="proj-img">
@@ -288,7 +327,7 @@
                 <a href="https://github.com/Juanhv24/credit-origination-model" target="_blank" rel="noopener noreferrer" class="proj-link">Ver Caso de Estudio →</a>
             </div>
 
-            <!-- PROYECTO 4: Job Tracker — Extensión + Backend Serverless -->
+            <!-- PROYECTO 5: Job Tracker — Extensión + Backend Serverless -->
             <div class="proj-card">
                 <button type="button" class="proj-zoom" data-full="images/job_tracker_arquitectura.png" aria-label="Ampliar: arquitectura del Job Tracker">
                     <img src="images/cards/job_tracker_es.png" width="1080" height="555" alt="Flujo del sistema: extensión de Chrome, backend en Apps Script con Claude, Google Sheet, Google Drive y Gmail" loading="lazy" decoding="async" class="proj-img">
@@ -326,7 +365,7 @@
                 <a href="https://github.com/Juanhv24/job-tracker" target="_blank" rel="noopener noreferrer" class="proj-link">Ver Caso de Estudio →</a>
             </div>
 
-            <!-- PROYECTO 5: Beta Bank — Predicción de Churn -->
+            <!-- PROYECTO 6: Beta Bank — Predicción de Churn -->
             <div class="proj-card">
                 <button type="button" class="proj-zoom" data-full="images/beta_model_comparison_es.png" aria-label="Ampliar: comparación de modelos de Beta Bank">
                     <img src="images/cards/beta_bank_es.png" width="1080" height="555" alt="F1 en el conjunto de prueba: Random Forest 0.618, árbol de decisión 0.570 y regresión logística 0.513, frente a una meta de 0.59" loading="lazy" decoding="async" class="proj-img">
